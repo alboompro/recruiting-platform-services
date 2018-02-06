@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="146px" viewBox="0 0 145 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-/-americano" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15">
+            <path d="M145,73.103 C145,113.143 112.541,145.603 72.5,145.603 C32.46,145.603 0,113.143 0,73.103 C0,33.062 32.46,0.602 72.5,0.602 C112.541,0.602 145,33.062 145,73.103" id="Fill-44" fill="#785A3D"></path>
+            <path d="M145,73.118 C145,63.006 142.925,53.382 139.186,44.638 L96.274,25.116 L52.227,121.088 L102.996,138.892 C127.795,127.374 145,102.261 145,73.118" id="Fill-49" fill="#684E35"></path>
+            <polyline id="Fill-65" fill="#FFFFFE" points="46.979 42.126 52.227 121.088 92.794 121.088 98.016 42.126 46.979 42.126"></polyline>
+            <polygon id="Fill-66" fill="#FFFFFE" points="48.729 33.84 96.274 33.84 96.274 25.116 48.729 25.116"></polygon>
+            <polygon id="Fill-67" fill="#EDEDEA" points="41.965 44.745 103.035 44.745 103.035 32.532 41.965 32.532"></polygon>
+            <polyline id="Fill-68" fill="#EDEDEA" points="72.511 42.126 72.511 121.088 92.794 121.088 98.016 42.126 72.511 42.126"></polyline>
+            <polyline id="Fill-69" fill="#F0A44D" points="47.948 57.001 97.047 57.001 94.167 100.408 50.827 100.408 47.948 57.001"></polyline>
+            <polyline id="Fill-70" fill="#EA8A3B" points="97.047 57.001 94.167 100.408 72.498 100.408 72.498 57.001 97.047 57.001"></polyline>
+            <polygon id="Fill-71" fill="#EDEDEA" points="72.498 32.531 96.274 32.531 96.274 25.116 72.498 25.116"></polygon>
+            <polygon id="Fill-72" fill="#DADBD8" points="72.498 44.745 103.035 44.745 103.035 32.532 72.498 32.532"></polygon>
+        </g>
+    </g>
+</svg>
