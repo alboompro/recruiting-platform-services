@@ -8,7 +8,7 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
-.home {
+.home, .products {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +44,76 @@ html {
   color: #858585;
   font-size: 11px;
   letter-spacing: 1.1px;
+}
+
+.box-details {
+  display: flex;
+}
+
+.box-details-img img {
+  height: 6rem;
+  margin: 2rem .6rem .5rem 2rem;
+}
+
+.box-details-description {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box-details-description-titles {
+  margin-left: 1rem;
+}
+
+.box-details-description-titles-name {
+  color: #887a6a;
+  font-weight: normal;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+}
+
+.box-details-description-titles-time {
+  font-weight: normal;
+  font-size: 10px;
+  color: #7c6e5f;
+}
+
+.box-details-description-titles-time .icon {
+  padding-right: .4rem;
+}
+
+.style-check {
+  display: block;
+  height: auto;
+  width: 3rem;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.style-check input {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1.5rem;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #cbd3d0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.style-check input:active, input:checked:active {
+  background-color: #48D2A0;
+  border-color: #fff;
+}
+
+.style-check input:checked {
+  background: url("../images/check-ok.svg") no-repeat center center;
+  background-size: 100%;
+  border: none;
+  transition: .15s;
 }
 
 .home-box {
@@ -104,4 +174,42 @@ html {
   cursor: pointer;
   width: 18rem;
   background-color: #34495e;
+}
+
+.separator {
+  content: '';
+  width: 90%;
+  height: 1px;
+  display: block;
+  background-color: #979797;
+  margin: 0 auto;
+  opacity: 0.41;
+}
+
+.separator-main {
+  content: '';
+  width: 90%;
+  height: 1px;
+  display: block;
+  background-color: #979797;
+  margin: 0 auto;
+  opacity: 0.41;
+  height: 2px;
+}
+
+.products-box {
+  border: 1px solid #BCB5B9;
+  height: auto;
+  width: 32rem;
+}
+
+.products-box-button input {
+  cursor: pointer;
+  height: 5rem;
+  letter-spacing: 2.4px;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  background-color: #34495e;
+  width: 100%;
 }
