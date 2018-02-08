@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
 
 html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;}
-.home,.products,.complements{@include flex-all-center; height: 100%; width: 100%; }
+.home,.products,.complements,.final{@include flex-all-center; height: 100%; width: 100%; }
 
 // reusable blocks
 .top{@include flex; width: 100%;  height: 9rem;}
@@ -62,3 +62,18 @@ html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;
 .complements-box-button input{@include button; clear: both; margin: -.5px; width:50%;}
 .complements-box-button-red{background-color:$color-red;}
 .complements-box-button-green{background-color: $color-green;}
+
+// final
+.final-box{@include border;height: auto; width: 32rem;}
+.final-box-title{padding: 3rem;}
+.final-box-title h1{font-size: $font-final; color: $color-brown; font-weight: normal; font-family: 'PT Sans Caption'; text-align: center;}
+.final-box-cupon{@include flex-x-center; margin: 3rem; border: 4px solid $color-border; border-style: dashed;}
+.final-box-button{ @include flex-x-center; padding-left: 1rem;}
+.final-box-button input{@include button; margin-right: 1rem; margin-bottom: 2rem;}
+.final-box-button-reload{padding: 2rem; border: 1px solid $color-border2; background-color: $color-grey-btn; }
+.final-box-button-print{width:70%; background-color:$color-blue; }
+
+.final-box-countdown{@include flex-all-center}
+.c-container {position: relative;width: 200px;}
+.c-text {position: absolute;width: 100%;text-align: center;color: $color-brown;font-size: $font-input;font-weight:bold;line-height: 30px;top: 50%;margin-top: -15px;}
+svg {width: 100%;}

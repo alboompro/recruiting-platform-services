@@ -8,7 +8,7 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
-.home, .products, .complements {
+.home, .products, .complements, .final {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,4 +304,85 @@ html {
 
 .complements-box-button-green {
   background-color: #48D2A0;
+}
+
+.final-box {
+  border: 1px solid #BCB5B9;
+  height: auto;
+  width: 32rem;
+}
+
+.final-box-title {
+  padding: 3rem;
+}
+
+.final-box-title h1 {
+  font-size: 26px;
+  color: #503a23;
+  font-weight: normal;
+  font-family: 'PT Sans Caption';
+  text-align: center;
+}
+
+.final-box-cupon {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  border: 4px solid #BCB5B9;
+  border-style: dashed;
+}
+
+.final-box-button {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.final-box-button input {
+  cursor: pointer;
+  height: 5rem;
+  letter-spacing: 2.4px;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.final-box-button-reload {
+  padding: 2rem;
+  border: 1px solid #bfbfbf;
+  background-color: #cacaca;
+}
+
+.final-box-button-print {
+  width: 70%;
+  background-color: #34495e;
+}
+
+.final-box-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-container {
+  position: relative;
+  width: 200px;
+}
+
+.c-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #503a23;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+svg {
+  width: 100%;
 }
