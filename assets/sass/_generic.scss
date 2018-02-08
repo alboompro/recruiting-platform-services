@@ -1,0 +1,34 @@
+//variables
+$color-border: #BCB5B9;
+$color-border2: #bfbfbf;
+$color-grey: #858585;
+$color-grey-clean: #979797;
+$color-blue:  #34495e;
+$color-white: #fff;
+$color-brown: #503a23;
+$color-brown-clean: #887a6a;
+$color-brown-clean2: #7c6e5f;
+$color-green: #48D2A0;
+$color-red: #d15f41;
+$color-grey-btn: #cacaca;
+
+$font-label: 15px;
+$font-input: 20px;
+$font14: 14px;
+$font-title: 29px;
+$font-sub: 11px;
+$font-time: 10px;
+$font-sub-complements: 12px;
+$font-time-complements: 10px;
+$font-final: 26px;
+
+// mixins
+@mixin flex{display:flex;}
+@mixin flex-x-center{display: flex; justify-content: center;}
+@mixin flex-y-center{display: flex;align-items: center;}
+@mixin flex-all-center{display: flex; align-items: center;justify-content: center;}
+@mixin flex-column{display: flex; flex-direction: column;}
+@mixin flex-right{display: flex; justify-content: flex-end;}
+
+@mixin border{border: 1px solid $color-border;}
+@mixin button{cursor:pointer; height: 5rem; letter-spacing: 2.4px; font-size: $font14;border:none;color:$color-white;}
