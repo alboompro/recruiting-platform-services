@@ -24,6 +24,7 @@ html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;
 .style-check{ display: block; height: auto; width: 3rem; cursor: pointer; margin-right:3rem;}
 .style-check input{ @include check;}
 .style-check input:active, input:checked:active{ background-color:$color-green; border-color: $color-white; }
+.teste{@include check-ok;}
 .style-check input:checked{@include check-ok;}
 
 // home

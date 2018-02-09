@@ -109,6 +109,13 @@ html {
   border-color: #fff;
 }
 
+.teste {
+  background: url("../images/check-ok.svg") no-repeat center center;
+  background-size: 100%;
+  border: none;
+  transition: .15s;
+}
+
 .style-check input:checked {
   background: url("../images/check-ok.svg") no-repeat center center;
   background-size: 100%;
