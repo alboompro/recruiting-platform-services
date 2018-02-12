@@ -6,5 +6,10 @@
 		{
 			header("Location:index.php?controller=c_home&method=login");
 		}
+
+		function products()
+		{
+			header("Location:index.php?controller=c_products&method=show");
+		}
 	}
 ?>

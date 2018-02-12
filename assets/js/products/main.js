@@ -1,44 +1,12 @@
+var btnContinue = document.querySelector('[data-js="continue"]');
+btnContinue.addEventListener('click',handleChecks,false);
 
-
-
-// var theCheckboxes = $(".pricing-levels-3 input[type='checkbox']");
-// theCheckboxes.click(function()
-// {
-//     if (theCheckboxes.filter(":checked").length > 3)
-//         $(this).removeAttr("checked");
-// });
-
-(function(){
-
-  'use strict';
-
+function handleChecks(){
   var check = document.querySelectorAll('[data-js="checkbox"]');
-  var arr = [];
-
-  check.forEach(function(atual){
-    atual.addEventListener('click',function(event){
-      event.preventDefault();
-
-      if(atual.className == 'teste'){
-        arr = arr.filter(function(elemento){
-          return elemento !== atual;
-        });
-        atual.classList.remove('teste');
-      }
-      else {
-        if(arr.length < 2){
-          arr.push(atual);
-          atual.classList.add('teste');
-        }
-        else {
-          var remove = arr.pop();
-          remove.classList.remove('teste'); 
-          atual.classList.add('teste');
-          arr.push(atual);
-        }
-      }
-    })
+  var checked = [];
+  check.forEach(function(element){
+    if(element.classList.contains('teste')){
+      checked.push(element.id);
+    }
   })
-
-
-})();
+}

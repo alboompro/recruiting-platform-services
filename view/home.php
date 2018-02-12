@@ -13,7 +13,7 @@
 <body class="home">
   <div class="home-box">
     <div class="home-box-img">
-      <img src="./assets/images/coffe.svg" alt="Logo Smart Coffe">
+      <img src="./assets/images/coffee.svg" alt="Logo Smart Coffe">
     </div>
     <form data-js="form-home" class="home-box-form">
       <div class="home-box-form-name">
@@ -25,7 +25,7 @@
         <input type="email" data-js="email" required>
       </div>
       <div class="home-box-form-button">
-        <a href="products.html"><input type="submit" value="CADASTRAR"/></a>
+        <a href="/"><input type="submit" value="CADASTRAR"/></a>
       </div>
     </form>
   </div>
