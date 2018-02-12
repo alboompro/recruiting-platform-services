@@ -165,19 +165,18 @@ html {
   font-size: 20px;
 }
 
-.home-box-button {
+.home-box-form-button {
   display: flex;
   justify-content: flex-end;
 }
 
-.home-box-button input {
+.home-box-form-button input {
   cursor: pointer;
   height: 5rem;
   letter-spacing: 2.4px;
   font-size: 14px;
   border: none;
   color: #fff;
-  margin: auto 2rem;
   cursor: pointer;
   width: 18rem;
   background-color: #34495e;
