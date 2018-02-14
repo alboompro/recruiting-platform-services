@@ -1,3 +1,6 @@
+<!-- somo o total de tempo pelo javascript, chamo o ajax e envio esse total, guardo o total na sessao e chamo a pagina final
+na pagina final coloco o total em um input invisivel, pego esse input pelo javascript e faço o tempo -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -31,6 +31,8 @@ class c_complements
 
         $complements = new m_complementsDAO();
         $ret_complements = $complements -> selectAll();
+
+
       }
       require_once "view/complements.php";
   }

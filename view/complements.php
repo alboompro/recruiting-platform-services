@@ -52,8 +52,8 @@
                       <h3 class="complements-box-additional-side-details-titles-time"><i class="icon far fa-clock"></i><?php echo $dado->tempo_complemento?> min</h3>
                   </div>
                   <div class="complements-box-additional-side-details-check">
-                      <label class="style-check complements"  for="checkbox">
-                      <input type="checkbox" id="checkbox">
+                      <label class="style-check complements"  for="<?php echo $dado->id_complemento ?>">
+                      <input type="checkbox" name="<?php echo $banco->id?>"id="<?php echo $dado->id_complemento ?>">
                   </div>
                 </div>
               </div>

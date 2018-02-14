@@ -27,4 +27,29 @@
         }
     }
 
+    function getOneUser($user){
+        $sql = "SELECT * 
+                FROM clients 
+                WHERE email = (?);";
+        try
+        {
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindValue(1, $user->getEmail());
+            $ret = $stmt->execute();
+            $this->db = null;
+            if(!$ret)
+            {
+                die("Erro ao buscar usuário");
+            }
+            else {
+                return $ret = $stmt->fetchAll(PDO::FETCH_OBJ);      
+            }
+        }
+        catch (PDOException $e)
+        {
+            die ($e->getMessage());
+        }
+
+    }
+
   }

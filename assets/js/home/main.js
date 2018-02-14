@@ -26,7 +26,8 @@ form.addEventListener('submit',function(e){
     dataType: "html"
 
   }).done(function(resposta) {
-    window.location="index.php?controller=routes&method=products";
+    console.log(resposta);
+    window.location="index.php?controller=c_products&method=show";
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
 

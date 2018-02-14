@@ -15,6 +15,13 @@ class c_home
         $m_userDAO = new m_userDAO();
         $m_userDAO -> insert($user);
       } 
+
+      $user1 = new m_user(null,null,$email,null);
+      $m_userDAO1 = new m_userDAO();
+      $ret = $m_userDAO1 -> getOneUser($user);
+
+      session_start();
+      $_SESSION["id"] = $ret[0]->id;
     }
     require_once "view/home.php";
   }
