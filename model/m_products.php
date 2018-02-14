@@ -1,6 +1,6 @@
 <?php
 
-class m_user
+class m_products
 {
     private $idproducts;
     private $name;
@@ -13,8 +13,35 @@ class m_user
         $this->photo = $photo;
     }
 
-  
-    
+    public function getIdproducts()
+    {
+        return $this->idproducts;
+    }
 
+    public function setIdproducts($idproducts)
+    {
+        $this->idproducts = $idproducts;
+    }
+
+    
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
 
 }

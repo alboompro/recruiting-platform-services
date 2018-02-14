@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
   <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
   <title>Products</title>
 </head>
 <body class="products">
@@ -21,7 +22,6 @@
       </div>
     </div>
     <div class="separator-main"></div>
-
     <?php
        if(count($ret) > 0)
        {
@@ -38,7 +38,7 @@
               echo"</div>";
               echo"<div class='box-details-description-check'>";
                 echo"<label class='style-check'  for='{$ret[$x]->id}'>";
-                echo"<input data-js='checkbox' type='checkbox' id='{$ret[$x]->id}'>";
+                echo"<input data-js='checkbox' name='check[]' type='checkbox' value='{$ret[$x]->id}' id='{$ret[$x]->id}'>";
               echo"</div>";
             echo"</div>";
           echo"</div>";
@@ -46,9 +46,9 @@
          }
         }
     ?>  
-    <div class="products-box-button">
-        <a data-js="continue" ><input type="submit" value="CONTINUAR"/></a>
-    </div>
+      <div class="products-box-button">
+          <a data-js="continue" ><input type="submit" value="CONTINUAR"/></a>
+      </div>
   </div>
   <script src="./assets/js/products/handleCheck.js"></script>
   <script src="./assets/js/products/main.js"></script>

@@ -222,9 +222,14 @@ html {
 
 .complements-box {
   border: 1px solid #BCB5B9;
-  height: auto;
-  width: 32rem;
-  margin-top: 10rem;
+  height: 60rem;
+  overflow: scroll;
+  width: 34rem;
+}
+
+.complements-box-additional-side {
+  display: flex;
+  width: 80%;
 }
 
 .complements-box-title {
@@ -238,16 +243,16 @@ html {
 
 .complements-box-additional {
   display: flex;
-  width: 80%;
-  float: right;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-.complements-box-additional-img img {
+.complements-box-additional-side-img img {
   height: 4rem;
   margin: 1rem .6rem .5rem 1rem;
 }
 
-.complements-box-additional-details {
+.complements-box-additional-side-details {
   display: flex;
   display: flex;
   align-items: center;
@@ -255,14 +260,14 @@ html {
   width: 100%;
 }
 
-.complements-box-additional-details-titles-name {
+.complements-box-additional-side-details-titles-name {
   font-size: 12px;
   letter-spacing: 1.2px;
   color: #887a6a;
   font-weight: normal;
 }
 
-.complements-box-additional-details-titles-time {
+.complements-box-additional-side-details-titles-time {
   font-weight: normal;
   font-size: 10px;
   color: #7c6e5f;
@@ -285,11 +290,11 @@ html {
   background-color: #979797;
   margin: 0 auto;
   opacity: 0.41;
-  clear: both;
 }
 
 .complements-box-button {
-  margin-top: 18rem;
+  display: flex;
+  width: 100%;
 }
 
 .complements-box-button input {
@@ -299,8 +304,10 @@ html {
   font-size: 14px;
   border: none;
   color: #fff;
-  clear: both;
-  margin: -.5px;
+  width: 100%;
+}
+
+.complements-box-button a {
   width: 50%;
 }
 

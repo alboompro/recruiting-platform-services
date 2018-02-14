@@ -9,4 +9,22 @@ function handleChecks(){
       checked.push(element.id);
     }
   })
+
+ window.location="index.php?controller=c_complements&method=show&checks="+checked;
+
+
+  // $.ajax({
+  //   url: "index.php?controller=c_products&method=getProducts",
+  //   type: "POST",
+  //   data: "checked="+checked,
+  //   dataType: "html"
+
+  // }).done(function(resposta) {
+  //    $('html').html(resposta);
+  // }).fail(function(jqXHR, textStatus ) {
+  //     console.log("Request failed: " + textStatus);
+
+  // });
+
+
 }

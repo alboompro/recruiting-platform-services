@@ -47,20 +47,22 @@ html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;
 .products-box-button input{@include button; background-color: $color-blue; width: 100%;}
 
 // complements
-.complements-box{@include border; height: auto; width: 32rem; margin-top: 10rem;}
+.complements-box{@include border; height: 60rem; overflow: scroll; width: 34rem; }
+.complements-box-additional-side{@include flex; width: 80%;}
 .complements-box-title{text-align: center; color:$color-brown-clean2; margin: 1rem; letter-spacing: -0.3px; font-size: $font-label; font-family: 'PT Sans Caption';}
-.complements-box-additional{@include flex; width: 80%; float:right;}
-.complements-box-additional-img img{height: 4rem; margin:  1rem .6rem .5rem 1rem;}
-.complements-box-additional-details{@include flex; @include flex-y-center; justify-content:space-between ;  width: 100%;}
-.complements-box-additional-details-titles-name{@include name-coffe-complements;}
-.complements-box-additional-details-titles-time{@include time-complements;}
+.complements-box-additional{@include flex; width: 100%;justify-content: flex-end;  }
+.complements-box-additional-side-img img{height: 4rem; margin:  1rem .6rem .5rem 1rem;}
+.complements-box-additional-side-details{@include flex; @include flex-y-center; justify-content:space-between ;  width: 100%;}
+.complements-box-additional-side-details-titles-name{@include name-coffe-complements;}
+.complements-box-additional-side-details-titles-time{@include time-complements;}
 .complements-box-additional-details-titles-time .icon{padding-right: .4rem;}
 
 .style-check input{width: 2rem; height: 2rem;}
-.separator-complements { @include line; clear: both;}
+.separator-complements { @include line;}
 
-.complements-box-button{margin-top: 18rem;}
-.complements-box-button input{@include button; clear: both; margin: -.5px; width:50%;}
+.complements-box-button{display:flex;width: 100%;}
+.complements-box-button input{ @include button; width:100%;}
+.complements-box-button a{width: 50%;}
 .complements-box-button-red{background-color:$color-red;}
 .complements-box-button-green{background-color: $color-green;}
 
