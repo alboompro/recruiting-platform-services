@@ -9,7 +9,7 @@ class c_products
     $ret = $productsDAO -> selectAll();
 
     // chamada do id_user da sessao
-    //session_start();
+    //  session_start();
     //  $id_user = $_SESSION["id"];
     //  var_dump($id_user);
 

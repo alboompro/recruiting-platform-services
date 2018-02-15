@@ -53,7 +53,7 @@
                   </div>
                   <div class="complements-box-additional-side-details-check">
                       <label class="style-check complements"  for="<?php echo $dado->id_complemento ?>">
-                      <input type="checkbox" name="<?php echo $banco->id?>"id="<?php echo $dado->id_complemento ?>">
+                      <input type="checkbox" data-js="checkbox" id="[<?php echo$dado->id_complemento ?>,<?php echo$banco->id ?>]">
                   </div>
                 </div>
               </div>
@@ -72,6 +72,6 @@
     </div>
   </div>
  
-  
+  <script src="./assets/js/complements/main.js"></script>
 </body>
 </html>
