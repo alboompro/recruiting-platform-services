@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
   <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
   <title>Complements</title>
 </head>
 <body class="complements">
@@ -27,14 +29,14 @@
     </div>
     <?php
       foreach($arr_prod as $dado){
-        foreach($dado as $banco){ ?>
+        foreach($dado as $banco){?>
           <div class="box-details">
             <div class="box-details-img">
               <img src="./assets/<?php echo $banco->foto?>" alt="">
             </div>
             <div class="box-details-description">
               <div class="box-details-description-titles">
-                  <h2 class="box-details-description-titles-name"><?php echo $banco->nome ?></h2>
+                  <h2 class="box-details-description-titles-name" data="pai" idpai="<?php echo $banco->id ?>"><?php echo $banco->nome ?></h2>
                   <h3 class="box-details-description-titles-time"><i class="icon far fa-clock"></i><?php echo $banco->tempo?>min</h3>
               </div>
             </div>
@@ -53,7 +55,7 @@
                   </div>
                   <div class="complements-box-additional-side-details-check">
                       <label class="style-check complements"  for="<?php echo $dado->id_complemento ?>">
-                      <input type="checkbox" data-js="checkbox" id="[<?php echo$dado->id_complemento ?>,<?php echo$banco->id ?>]">
+                      <input type="checkbox" time="<?php echo $dado->tempo_complemento?>"recipe="<?php echo$banco->id?>" data-js="checkbox" id="<?php echo$dado->id_complemento ?>">
                   </div>
                 </div>
               </div>
@@ -68,7 +70,7 @@
     ?>
     <div class="complements-box-button">
         <a href="products.php"><input class="complements-box-button-red" type="submit" value="VOLTAR"/></a>
-        <a href="final.html"><input class="complements-box-button-green" type="submit" value="FINALIZAR"/></a>
+        <a href="final.html"><input class="complements-box-button-green" data-js="btn-next" type="submit" value="FINALIZAR"/></a>
     </div>
   </div>
  

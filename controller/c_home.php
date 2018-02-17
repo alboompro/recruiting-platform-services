@@ -5,6 +5,10 @@ class c_home
 {
   function login()
   {
+    if(isset($_SESSION['id'])){
+      print_r('tem sessão');
+    }
+    
     if($_POST){       
       $name = $_POST["name"];
       $email= $_POST["email"];

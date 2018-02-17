@@ -19,7 +19,7 @@
             $this->db = null;
             if(!$ret)
             {
-                die("Erro buscar produtos");
+                die("Erro buscar complementos");
             }
             else 
             {

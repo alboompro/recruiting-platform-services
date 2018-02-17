@@ -5,7 +5,7 @@ function handleChecks(){
   var check = document.querySelectorAll('[data-js="checkbox"]');
   var checked = [];
   check.forEach(function(element){
-    if(element.classList.contains('teste')){
+    if(element.classList.contains('style-checked')){
       checked.push(element.id);
     }
   })

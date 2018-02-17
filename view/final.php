@@ -7,21 +7,21 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="../assets/css/normalize/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/main.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
   <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
-  <script defer src="../assets/fontawesome/on-server/js/fontawesome-all.js"></script>
-  <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script>
+
   <title>Final</title>
 </head>
 <body class="final">
   <div class="final-box">
       <div class="top"> 
         <div class="top-img">
-            <img src="../assets/images/coffe.svg" alt="">
+            <img src="./assets/images/coffee.svg" alt="">
         </div>
         <div class="top-description">
             <h1 class="top-description-title">Smart Coffe</h1>
@@ -57,6 +57,6 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
   </div>
   </div>
 
-  <script src="../assets/js/final/main.js"></script>
+  <script src="./assets/js/final/main.js"></script>
 </body>
 </html>
