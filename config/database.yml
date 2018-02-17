@@ -14,19 +14,19 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: '280896'
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: recruiting-platform-services_development
+  database: smart_coffee
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: recruiting-platform-services_test
+  database: smart_coffee_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: recruiting-platform-services_production
-  username: recruiting-platform-services
-  password: <%= ENV['RECRUITING-PLATFORM-SERVICES_DATABASE_PASSWORD'] %>
+  database: smart_coffee_production
+  username: smart_coffee
+  password: <%= ENV['SMART_COFFEE_DATABASE_PASSWORD'] %>
