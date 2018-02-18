@@ -38,6 +38,9 @@ class c_complements
 
   function handleOrder(){
     if($_POST){
+      //pegar minutos e segundos
+      $secFinal = $_POST["secFinal"];
+      $minFinal = $_POST["minFinal"];
 
       if($_POST['recipe2'] == 'undefined'){
         $arr_recipes = str_split($_POST['recipe1']);
@@ -53,6 +56,8 @@ class c_complements
       array_push($total_complements,$complements1,$complements2);
 
       session_start();
+      $_SESSION['min'] = $minFinal;
+      $_SESSION['sec'] = $secFinal;
       $id_user = $_SESSION["id"];
 
       
@@ -85,7 +90,6 @@ class c_complements
   
       }
       
-      //adicionar na tabela client_recipe_ingredients
 
     }
   }

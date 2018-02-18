@@ -74,15 +74,46 @@
       //pegar os tempos
       var time_first = arr_principal[0][1];
       var time_second = arr_principal[1][1];
-      var times = time_first.concat(time_second);
+      var times_complements = time_first.concat(time_second);
 
   
 
-    // if tiver dois principais
+      //somar os tempos
+      var time_main = document.querySelectorAll('[data-js="time-main"]');
+
+      var arr_times_main = Array.prototype.map.call(time_main,function(element){
+
+        return element.textContent.replace("min",'');
+      });
+
+      arr_times_main = arr_times_main.concat(times_complements);
+      arr_times_main = arr_times_main.map(function(element){
+        return element.split(':');
+      });
+
+      var seconds = arr_times_main.map(function(element){
+        return element.pop();
+      });
+
+      var minutes = arr_times_main.map(function(element){
+        return element.pop();
+      }).map(function(min){
+        return min*60;
+      });
+
+      var allSeconds = seconds.concat(minutes);
+      allSeconds = allSeconds.reduce(function(total,atual){
+      return Number(total)+Number(atual);
+      });
+
+      var minFinal = parseInt(allSeconds / 60, 10);
+      var secFinal = parseInt(allSeconds % 60, 10);
+      secFinal = secFinal < 10 ? "0" + secFinal : secFinal;  
+
     $.ajax({
       url: "index.php?controller=c_complements&method=handleOrder",
       type: "POST",
-      data: "recipe1="+id_pai1+"&recipe2="+id2_pai2+"&comp_1="+first_recipe+"&comp_2="+second_recipe,
+      data: "recipe1="+id_pai1+"&recipe2="+id2_pai2+"&comp_1="+first_recipe+"&comp_2="+second_recipe+"&secFinal="+secFinal+"&minFinal="+minFinal,
       dataType: "html"
   
     }).done(function(resposta) {

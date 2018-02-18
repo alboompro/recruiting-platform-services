@@ -31,6 +31,8 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
       <div class="separator-main"></div>
       <div class="final-box-title">
         <h1>Pedido realizado com sucesso!</h1>
+        <input type="hidden" data-js="min" value="<?php  session_start(); echo $_SESSION['min']?>">
+        <input type="hidden" data-js="sec" value="<?php echo $_SESSION['sec']?>">
       </div>
       <div class="final-box-countdown">
           <div class="c-container">

@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
-  <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script>
+  <!-- <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script> -->
   <script src="./assets/js/jquery.min.js"></script>
   <title>Complements</title>
 </head>
@@ -37,7 +37,7 @@
             <div class="box-details-description">
               <div class="box-details-description-titles">
                   <h2 class="box-details-description-titles-name" data="pai" idpai="<?php echo $banco->id ?>"><?php echo $banco->nome ?></h2>
-                  <h3 class="box-details-description-titles-time"><i class="icon far fa-clock"></i><?php echo $banco->tempo?>min</h3>
+                  <h3 class="box-details-description-titles-time" data-js="time-main"><i class="icon far fa-clock"></i><?php echo $banco->tempo?>min</h3>
               </div>
             </div>
         </div>
