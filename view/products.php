@@ -34,7 +34,7 @@
             echo"<div class='box-details-description'>";
               echo"<div class='box-details-description-titles'>";
                 echo"<h2 class='box-details-description-titles-name'>{$ret[$x]->nome}</h2>";
-                echo"<h3 class='box-details-description-titles-time'><i class='icon far fa-clock'></i>{$ret[$x]->tempo} min</h3>";
+                echo"<h3 class='box-details-description-titles-time'><img class='icon-clock' src='./assets/images/circle-time.svg' alt='Relógio'/>{$ret[$x]->tempo} min</h3>";
               echo"</div>";
               echo"<div class='box-details-description-check'>";
                 echo"<label class='style-check'  for='{$ret[$x]->id}'>";

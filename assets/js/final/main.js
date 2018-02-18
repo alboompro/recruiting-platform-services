@@ -102,6 +102,5 @@ var Countdown = function () {
 $(function () {
     var sec = document.querySelector('[data-js="sec"]').value;
     var min = document.querySelector('[data-js="min"]').value;
-    console.log(min);
     var yeah = new Countdown({ minutes: min, seconds: sec }, $(".c-container"));
 });

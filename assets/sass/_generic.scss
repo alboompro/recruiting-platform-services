@@ -36,6 +36,7 @@ $font-final: 26px;
 @mixin name-coffe{color:$color-brown-clean; font-weight:normal;  letter-spacing: 0.8px; font-size: $font14;}
 @mixin name-coffe-complements{font-size: $font-sub-complements; letter-spacing: 1.2px; color: $color-brown-clean; font-weight: normal;}
 @mixin time-complements{font-weight: normal; font-size: $font-time-complements; color: $color-brown-clean2;}
+@mixin icon-clock{padding-right: .4rem;width: 13px;height: 13px;};
 @mixin time{font-weight: normal; font-size: $font-time; color: $color-brown-clean2;}
 @mixin check{height: 3rem; width: 3rem; margin-right: 1.5rem; -webkit-appearance: none; background-color: rgba(0, 0, 0, 0); border: 2px solid #cbd3d0; border-radius: 50%; cursor: pointer; transition: .15s;}
 @mixin check-ok{background: url('../images/check-ok.svg') no-repeat center center; background-size: 100%; border: none; transition: .15s;}

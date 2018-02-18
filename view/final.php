@@ -53,7 +53,7 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
         <h2>SOCO9009</h2>
       </div>
       <div class="final-box-button">
-          <a href="home.html"><input class="final-box-button-reload" type="submit" value="R"/></a>
+          <a href="home.html" class="final-box-button-reload"><img src="./assets/images/reload.svg"></a>
           <input class="final-box-button-print" type="submit" value="IMPRIMIR CUPOM"/>
       </div>
   </div>

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 html {
   font-size: 62.5%;
   width: 100%;
@@ -41,6 +44,7 @@ html {
   color: #858585;
   font-size: 11px;
   letter-spacing: 1.1px;
+  margin-bottom: 1rem;
 }
 
 .box-details {
@@ -75,10 +79,14 @@ html {
   font-weight: normal;
   font-size: 10px;
   color: #7c6e5f;
+  display: flex;
+  align-items: center;
 }
 
-.box-details-description-titles-time .icon {
+.icon-clock {
   padding-right: .4rem;
+  width: 13px;
+  height: 13px;
 }
 
 .style-check {
@@ -214,7 +222,7 @@ html {
   border: 1px solid #BCB5B9;
   height: 60rem;
   overflow: scroll;
-  width: 34rem;
+  width: 33rem;
 }
 
 .complements-box-additional-side {
@@ -261,10 +269,8 @@ html {
   font-weight: normal;
   font-size: 10px;
   color: #7c6e5f;
-}
-
-.complements-box-additional-details-titles-time .icon {
-  padding-right: .4rem;
+  display: flex;
+  align-items: center;
 }
 
 .style-check input {
@@ -353,9 +359,19 @@ html {
 }
 
 .final-box-button-reload {
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #bfbfbf;
   background-color: #cacaca;
+  margin-right: 1rem;
+  width: 16%;
+  height: 4.9rem;
+}
+
+.final-box-button-reload img {
+  width: 30px;
+  height: 26.9px;
 }
 
 .final-box-button-print {
@@ -384,8 +400,4 @@ html {
   line-height: 30px;
   top: 50%;
   margin-top: -15px;
-}
-
-svg {
-  width: 100%;
 }
