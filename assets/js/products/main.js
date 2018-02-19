@@ -1,7 +1,9 @@
 
 (function(){
+  'use strict';
+  
   var btnContinue = document.querySelector('[data-js="continue"]');
-  var check =       document.querySelectorAll('[data-js="checkbox"]');
+  var check       = document.querySelectorAll('[data-js="checkbox"]');
   btnContinue.addEventListener('click',handleChecks,false);
 
   function handleChecks(){

@@ -42,6 +42,7 @@ class c_complements
       $secFinal = $_POST["secFinal"];
       $minFinal = $_POST["minFinal"];
 
+      //pegar cafés principais
       if($_POST['recipe2'] == 'undefined'){
         $arr_recipes = str_split($_POST['recipe1']);
       }
@@ -49,48 +50,54 @@ class c_complements
         $arr_recipes = array_merge( str_split($_POST['recipe1']),str_split($_POST['recipe2']));
       }
 
+      //pegar complementos
       $complements1 = explode(",",$_POST['comp_1']);
       $complements2 = explode(",",$_POST['comp_2']);
 
-      $total_complements = [];
-      array_push($total_complements,$complements1,$complements2);
-
+      //guardar-pegar informações da sessão
       session_start();
       $_SESSION['min'] = $minFinal;
       $_SESSION['sec'] = $secFinal;
       $id_user = $_SESSION["id"];
 
-      
       //adicionar na tabela client_recipes
-      foreach ($arr_recipes as $id_recipe) {
-        $client_recipes = new m_clientRecipe(null,$id_recipe,$id_user);
-        $client_recipeDAO = new m_clientRecipeDAO();
-        $client_recipeDAO -> insert($client_recipes);
-      }
+      $this->addClientRecipe($arr_recipes,$id_user);
 
       //pegar id tabela de client_recipes
-      $client_recipes1 = new m_clientRecipe(null,null,$id_user);
-      $client_recipeDAO1 = new m_clientRecipeDAO();
-      $ret = $client_recipeDAO1 -> getIdClientRecipe($client_recipes1);
+      $ret = $this -> getIdClientRecipe($id_user);
 
-
-
-      foreach ($complements1 as $comp) {
-        $client_recipe_ingredient = new m_clientRecipeIngredient($comp, $ret[0]->id);
-        $client_recipe_ingredientDAO = new m_clientRecipeIngredientDAO();
-        $client_recipe_ingredientDAO -> insert($client_recipe_ingredient);
-      }
-
-      if(count($ret)>1){
-        foreach ($complements2 as $comp2) {
-          $client_recipe_ingredient2 = new m_clientRecipeIngredient($comp2, $ret[1]->id);
-          $client_recipe_ingredientDAO2 = new m_clientRecipeIngredientDAO();
-          $client_recipe_ingredientDAO2 -> insert($client_recipe_ingredient2);
+      
+      //inserir na tabela Client_recipe_ingredient
+      if(count($complements1)>0){
+        $this -> insertClientRecipeIngredient($complements1,$ret[0]->id);
+        if(count($ret)>1){
+          $this -> insertClientRecipeIngredient($complements2,$ret[1]->id);
         }
-  
       }
       
+    }
+  }
 
+  function addClientRecipe($recipes,$id_user){
+    foreach ($recipes as $id_recipe) {
+      $client_recipes = new m_clientRecipe(null,$id_recipe,$id_user);
+      $client_recipeDAO = new m_clientRecipeDAO();
+      $client_recipeDAO -> insert($client_recipes);
+    }
+  }
+
+  function getIdClientRecipe($id_user){
+    $client_recipes1 = new m_clientRecipe(null,null,$id_user);
+    $client_recipeDAO1 = new m_clientRecipeDAO();
+    $ret = $client_recipeDAO1 -> getIdClientRecipe($client_recipes1);
+    return $ret;
+  }
+
+  function insertClientRecipeIngredient($complements,$idClientRecipe){
+    foreach ($complements as $comp) {
+      $client_recipe_ingredient2 = new m_clientRecipeIngredient($comp, $idClientRecipe);
+      $client_recipe_ingredientDAO2 = new m_clientRecipeIngredientDAO();
+      $client_recipe_ingredientDAO2 -> insert($client_recipe_ingredient2);
     }
   }
 }

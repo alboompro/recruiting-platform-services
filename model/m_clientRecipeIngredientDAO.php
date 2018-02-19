@@ -19,7 +19,7 @@
           $this->db = null;
           if(!$ret)
           {
-              die("Erro ao inserir pedido");
+              die("Erro ao inserir em client_recipe_ingredients");
           }
           else 
           {

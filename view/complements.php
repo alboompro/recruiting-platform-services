@@ -35,7 +35,7 @@
             </div>
             <div class="box-details-description">
               <div class="box-details-description-titles">
-                  <h2 class="box-details-description-titles-name" data="pai" idpai="<?php echo $banco->id ?>"><?php echo $banco->nome ?></h2>
+                  <h2 class="box-details-description-titles-name" data-js="recipe" idRecipe="<?php echo $banco->id ?>"><?php echo $banco->nome ?></h2>
                   <h3 class="box-details-description-titles-time" data-js="time-main"><img class='icon-clock' src='./assets/images/circle-time.svg' alt='Relógio'/><?php echo $banco->tempo?>min</h3>
               </div>
             </div>
@@ -74,5 +74,6 @@
   </div>
  
   <script src="./assets/js/complements/main.js"></script>
+  <script src="./assets/js/complements/handleCheck.js"></script>
 </body>
 </html>
