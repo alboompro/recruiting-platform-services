@@ -4,13 +4,17 @@
   'use strict';
 
   var check = document.querySelectorAll('[data-js="checkbox"]');
-  var arr = [];
+  var arr   = [];
+
+  function isCheck(atual){
+    return atual.className == 'style-checked';
+  }
 
   check.forEach(function(atual){
     atual.addEventListener('click',function(event){
       event.preventDefault();
 
-      if(atual.className == 'style-checked'){
+      if(isCheck(atual)){
         arr = arr.filter(function(elemento){
           return elemento !== atual;
         });

@@ -5,11 +5,14 @@ class c_products
 {
   function show()
   {
-    $productsDAO = new m_productsDAO();
-    $ret = $productsDAO -> selectAll();
-
+    $ret = $this -> allProducts();
 
     require_once "view/products.php";
+  }
+
+  function allProducts(){
+    $productsDAO = new m_productsDAO();
+    return $productsDAO -> selectAll();
   }
 }
 
