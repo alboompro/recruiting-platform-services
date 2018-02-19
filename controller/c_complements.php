@@ -11,27 +11,16 @@ class c_complements
         $checks = explode(',', $checked);
 
         if(count($checks)>1){
-          $product1 = new m_products($checks[0]);
-          $productsDAO1 = new m_productsDAO();
-          $ret1 = $productsDAO1 -> selectOne($product1);
-
-          $product2 = new m_products($checks[1]);
-          $productsDAO2 = new m_productsDAO();
-          $ret2 = $productsDAO2 -> selectOne($product2);
-
+          $ret1 = $this -> getProduct($checks[0]);
+          $ret2 = $this -> getProduct($checks[1]);
           $arr_prod = Array($ret1,$ret2);
         }
         else {
-          $product1 = new m_products($checks[0]);
-          $productsDAO1 = new m_productsDAO();
-          $ret1 = $productsDAO1 -> selectOne($product1);
-
+          $ret1 = $this -> getProduct($checks[0]);
           $arr_prod = Array($ret1);
         }
-
         $complements = new m_complementsDAO();
         $ret_complements = $complements -> selectAll();
-
       }
       require_once "view/complements.php";
   }
@@ -65,7 +54,6 @@ class c_complements
 
       //pegar id tabela de client_recipes
       $ret = $this -> getIdClientRecipe($id_user);
-
       
       //inserir na tabela Client_recipe_ingredient
       if(count($complements1)>0){
@@ -76,6 +64,12 @@ class c_complements
       }
       
     }
+  }
+
+  function getProduct($check){
+    $product1 = new m_products($check);
+    $productsDAO1 = new m_productsDAO();
+    return $productsDAO1 -> selectOne($product1);
   }
 
   function addClientRecipe($recipes,$id_user){
