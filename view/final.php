@@ -31,7 +31,7 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
       <div class="separator-main"></div>
       <div class="final-box-title">
         <h1>Pedido realizado com sucesso!</h1>
-        <input type="hidden" data-js="min" value="<?php  session_start(); echo $_SESSION['min']?>">
+        <input type="hidden" data-js="min" value="<?php echo $_SESSION['min']?>">
         <input type="hidden" data-js="sec" value="<?php echo $_SESSION['sec']?>">
       </div>
       <div class="final-box-countdown">
@@ -50,10 +50,10 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
           </div>
       </div>
       <div class="final-box-cupon">
-        <h2>SOCO9009</h2>
+        <h2><?php echo $user[0]->coupon_code ?></h2>
       </div>
       <div class="final-box-button">
-          <a href="home.html" class="final-box-button-reload"><img src="./assets/images/reload.svg"></a>
+          <a href="index.php?controller=routes&method=start" class="final-box-button-reload"><img src="./assets/images/reload.svg"></a>
           <input class="final-box-button-print" type="submit" value="IMPRIMIR CUPOM"/>
       </div>
   </div>

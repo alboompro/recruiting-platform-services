@@ -68,7 +68,7 @@
       }
     ?>
     <div class="complements-box-button">
-        <a href="products.php"><input class="complements-box-button-red" type="submit" value="VOLTAR"/></a>
+        <a href="index.php?controller=c_products&method=show"><input class="complements-box-button-red" type="submit" value="VOLTAR"/></a>
         <a href="final.html"><input class="complements-box-button-green" data-js="btn-next" type="submit" value="FINALIZAR"/></a>
     </div>
   </div>

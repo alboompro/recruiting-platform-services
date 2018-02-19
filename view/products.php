@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
-  <script defer src="./assets/fontawesome/on-server/js/fontawesome-all.js"></script>
   <script src="./assets/js/jquery.min.js"></script>
   <title>Products</title>
 </head>
