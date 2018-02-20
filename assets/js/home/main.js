@@ -28,7 +28,7 @@ form.addEventListener('submit',function(e){
   }).done(function(resposta) {
     window.location="index.php?controller=c_products&method=show";
   }).fail(function(jqXHR, textStatus ) {
-      console.log("Request failed: " + textStatus);
+    console.log("Request failed: " + textStatus);
 
   });
 

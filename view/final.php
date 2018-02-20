@@ -53,7 +53,7 @@ na pagina final coloco o total em um input invisivel, pego esse input pelo javas
         <h2><?php echo $user[0]->coupon_code ?></h2>
       </div>
       <div class="final-box-button">
-          <a href="index.php?controller=routes&method=start" class="final-box-button-reload"><img src="./assets/images/reload.svg"></a>
+          <a href="index.php?controller=c_home&method=login" class="final-box-button-reload"><img src="./assets/images/reload.svg"></a>
           <input class="final-box-button-print" type="submit" value="IMPRIMIR CUPOM"/>
       </div>
   </div>

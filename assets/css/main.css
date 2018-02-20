@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@media screen and (max-width: 425px) {
+  .products-box, .complements-box, .final-box {
+    margin-top: 5rem;
+  }
+}
+
 html {
   font-size: 62.5%;
   width: 100%;
@@ -216,6 +222,15 @@ html {
   color: #fff;
   background-color: #34495e;
   width: 100%;
+}
+
+.alert {
+  color: red;
+  font-size: 14px;
+  margin: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 .complements-box {

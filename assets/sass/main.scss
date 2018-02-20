@@ -43,8 +43,9 @@ html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;
 // products
 .separator{@include line;}
 .separator-main{@include line; height: 2px;}
-.products-box{@include border; height: auto; width: 32rem;}
+.products-box{@include border; height: auto; width: 32rem; }
 .products-box-button input{@include button; background-color: $color-blue; width: 100%;}
+.alert{color:$color-red-intense; font-size: $font14; margin:1rem; margin-bottom:0; font-weight: bold; text-align: center;}
 
 // complements
 .complements-box{@include border; height: 60rem; overflow: scroll; width: 33rem;}

@@ -9,8 +9,8 @@
 	}
 	else
 	{
-		require_once "controller/routes.php";
-		$routes = new routes();
-		$routes->start();
+		require_once "controller/c_home.php";
+		$c_home = new c_home();
+		$c_home->login();
 	}
 ?>
