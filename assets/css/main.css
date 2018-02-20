@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) {
   .products-box, .complements-box, .final-box {
     margin-top: 5rem;
   }
@@ -35,8 +35,8 @@ html {
 
 .top-description {
   text-align: right;
-  width: 50rem;
-  margin-right: 2rem;
+  width: 60rem;
+  margin-right: 1rem;
 }
 
 .top-description-title {

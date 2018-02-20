@@ -15,7 +15,7 @@
   <div class="complements-box">
     <div class="top"> 
       <div class="top-img">
-        <img src="./assets/images/coffee.svg" alt="">
+        <img src="./assets/images/coffee.svg" alt="Smart ">
       </div>
       <div class="top-description">
         <h1 class="top-description-title">Smart Coffe</h1>
@@ -31,7 +31,7 @@
         foreach($dado as $banco){?>
           <div class="box-details">
             <div class="box-details-img">
-              <img src="./assets/<?php echo $banco->foto?>" alt="">
+              <img src="./assets/<?php echo $banco->foto?>" alt="<?php echo $banco->nome ?>">
             </div>
             <div class="box-details-description">
               <div class="box-details-description-titles">
@@ -45,7 +45,7 @@
             <div class="complements-box-additional">
               <div class="complements-box-additional-side">
                 <div class="complements-box-additional-side-img">
-                  <img src="./assets/<?php echo $dado->foto?>" alt="">
+                  <img src="./assets/<?php echo $dado->foto?>" alt="<?php echo $dado->complemento?>">
                 </div>
                 <div class="complements-box-additional-side-details">
                   <div class="complements-box-additional-side-details-titles">

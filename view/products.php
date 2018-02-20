@@ -13,7 +13,7 @@
   <div class="products-box">
     <div class="top"> 
       <div class="top-img">
-          <img src="./assets/images/coffee.svg" alt="">
+          <img src="./assets/images/coffee.svg" alt="Smart Coffe">
       </div>
       <div class="top-description">
           <h1 class="top-description-title">Smart Coffe</h1>
@@ -28,7 +28,7 @@
          {
           echo"<div class='box-details'>";
             echo"<div class='box-details-img'>";
-              echo"<img src='./assets/{$ret[$x]->foto}' alt=''>";
+              echo"<img src='./assets/{$ret[$x]->foto}' alt='{$ret[$x]->nome}'>";
             echo"</div>";
             echo"<div class='box-details-description'>";
               echo"<div class='box-details-description-titles'>";
