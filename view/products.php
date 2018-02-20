@@ -21,30 +21,29 @@
       </div>
     </div>
     <div class="separator-main"></div>
-    <?php
-       if(count($ret) > 0)
-       {
-         for($x=0; $x < count($ret); $x++)
-         {
-          echo"<div class='box-details'>";
-            echo"<div class='box-details-img'>";
-              echo"<img src='./assets/{$ret[$x]->foto}' alt='{$ret[$x]->nome}'>";
-            echo"</div>";
-            echo"<div class='box-details-description'>";
-              echo"<div class='box-details-description-titles'>";
-                echo"<h2 class='box-details-description-titles-name'>{$ret[$x]->nome}</h2>";
-                echo"<h3 class='box-details-description-titles-time'><img class='icon-clock' src='./assets/images/circle-time.svg' alt='Relógio'/>{$ret[$x]->tempo} min</h3>";
-              echo"</div>";
-              echo"<div class='box-details-description-check'>";
-                echo"<label class='style-check'  for='{$ret[$x]->id}'>";
-                echo"<input data-js='checkbox' name='check[]' type='checkbox' value='{$ret[$x]->id}' id='{$ret[$x]->id}'>";
-              echo"</div>";
-            echo"</div>";
-          echo"</div>";
-          echo"<div class='separator'></div>";
-         }
+    <?php 
+      if(count($ret) > 0){
+        foreach($ret as $dado){ ?>
+          <div class='box-details'>
+            <div class='box-details-img'>
+              <img src='./assets/<?php echo$dado->foto ?>' alt='<?php echo$dado->nome?>'>
+            </div>
+            <div class='box-details-description'>
+              <div class='box-details-description-titles'>
+                <h2 class='box-details-description-titles-name'><?php echo$dado->nome?></h2>
+                <h3 class='box-details-description-titles-time'><img class='icon-clock' src='./assets/images/circle-time.svg' alt='Relógio'/><?php echo$dado->tempo?> min</h3>
+              </div>
+              <div class='box-details-description-check'>
+                <label class='style-check'  for='<?php echo$dado->id?>'>
+                <input data-js='checkbox' name='check[]' type='checkbox' value='<?php echo$dado->id?>' id='<?php echo$dado->id?>'>
+              </div>
+            </div>
+          </div>
+          <div class='separator'></div>
+      <?php 
         }
-    ?>  
+      }
+      ?>
       <div class="products-box-button">
           <a data-js="continue" ><input type="submit" value="CONTINUAR"/></a>
       </div>
