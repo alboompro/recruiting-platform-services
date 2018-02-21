@@ -53,7 +53,7 @@
                       <h3 class="complements-box-additional-side-details-titles-time"><img class='icon-clock' src='./assets/images/circle-time.svg' alt='Relógio'/><?php echo $dado->tempo_complemento?> min</h3>
                   </div>
                   <div class="complements-box-additional-side-details-check">
-                      <label class="style-check complements"  for="<?php echo $dado->id_complemento ?>">
+                      <label class="style-check complements">
                       <input type="checkbox" time="<?php echo $dado->tempo_complemento?>"recipe="<?php echo$banco->id?>" data-js="checkbox" id="<?php echo$dado->id_complemento ?>">
                   </div>
                 </div>

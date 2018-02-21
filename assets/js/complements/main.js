@@ -9,13 +9,10 @@
     var recipe2 = recipes[1].getAttribute('idrecipe');
 
   var datas = {
-    main:         [],
     complements:  [],
     times:        [],
-    order:        [],
     complements2: [],
-    times2:       [],
-    order2:       []
+    times2:       []
   };
 
   function isCheck(element){
@@ -31,6 +28,36 @@
       datas.times2.push(time);
     }
   }
+
+  function map(arr,operation){
+    if(operation === 'replace'){
+      return Array.prototype.map.call(arr,function(element){
+              return element.textContent.replace("min",'');
+            })
+    }
+    if(operation === 'split'){
+      return arr = arr.map(function(element){
+                return element.split(':');
+              });
+    }
+    if(operation === 'pop'){
+      return arr.map(function(element){
+              return element.pop();
+            });
+    }
+    if(operation === 'multiply'){
+      return arr.map(function(min){
+              return min*60;
+            });
+    }
+
+  }
+
+  function reduce(arr){
+    return arr.reduce(function(total,atual){
+            return Number(total)+Number(atual);
+          });
+  }
  
   btnNext.addEventListener('click',function(event){
     event.preventDefault();
@@ -44,43 +71,19 @@
         }
       })
 
-      datas.order.push(datas.complements);
-      datas.order.push(datas.times);
-
-      datas.order2.push(datas.complements2);
-      datas.order2.push(datas.times2);
-
-      datas.main.push(datas.order);
-      datas.main.push(datas.order2);
-
-      //pegar os tempos
+      //juntar os tempos
       var times_complements = datas.times.concat(datas.times2);
+      var time_main         = document.querySelectorAll('[data-js="time-main"]');
 
-      //somar os tempos
-      var time_main = document.querySelectorAll('[data-js="time-main"]');
-      var arr_times_main = Array.prototype.map.call(time_main,function(element){
-        return element.textContent.replace("min",'');
-      });
-
+      var arr_times_main = map(time_main,'replace');
       arr_times_main = arr_times_main.concat(times_complements);
-      arr_times_main = arr_times_main.map(function(element){
-        return element.split(':');
-      });
+      arr_times_main = map(arr_times_main,'split');
 
-      var seconds = arr_times_main.map(function(element){
-        return element.pop();
-      });
-
-      var minutes = arr_times_main.map(function(element){
-        return element.pop();
-      }).map(function(min){
-        return min*60;
-      });
+      var seconds = map(arr_times_main,'pop');
+      var minutes = map(arr_times_main,'pop').map(function(min){return min*60});
 
       var allSeconds = seconds.concat(minutes);
-      allSeconds = allSeconds.reduce(function(total,atual){
-      return Number(total)+Number(atual);
-      });
+      allSeconds = reduce(allSeconds);
 
       var minFinal = parseInt(allSeconds / 60, 10);
       var secFinal = parseInt(allSeconds % 60, 10);
@@ -95,7 +98,7 @@
     }).done(function(resposta) {
       window.location="index.php?controller=c_final&method=show";
     }).fail(function(jqXHR, textStatus ) {
-        console.log("Request failed: " + textStatus);
+      console.log("Request failed: " + textStatus);
   
     });
 
