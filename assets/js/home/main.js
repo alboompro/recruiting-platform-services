@@ -17,6 +17,8 @@ form.addEventListener('submit',function(e){
   e.preventDefault();
   var name   = document.querySelector('[data-js="name"]').value;
   var email  = document.querySelector('[data-js="email"]').value;
+  var email = document.querySelector('[data-js="email"]');
+  var email_value
   var coupon = code();
 
   $.ajax({

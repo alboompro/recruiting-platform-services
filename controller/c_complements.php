@@ -43,7 +43,7 @@ class c_complements
       $complements1 = explode(",",$_POST['comp_1']);
       $complements2 = explode(",",$_POST['comp_2']);
 
-      //guardar-pegar informações da sessão
+      //guardar/pegar informações da sessão
       session_start();
       $_SESSION['min'] = $minFinal;
       $_SESSION['sec'] = $secFinal;

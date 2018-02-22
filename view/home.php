@@ -22,7 +22,7 @@
       </div>
       <div class="home-box-form-email">
         <label>Email</label>
-        <input type="email" data-js="email" required>
+        <input type="email" data-js="email" required="required" title="exemplo: exemplo@alboom.com" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
       </div>
       <div class="home-box-form-button">
         <a href="/"><input type="submit" value="CADASTRAR"/></a>
