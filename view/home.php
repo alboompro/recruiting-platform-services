@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./assets/css/normalize/normalize.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
+  <link rel="shortcut icon" href="//c.fastcdn.co/u/945855fc/7076173-0-favicon.png" type="image/ico">
   <script src="./assets/js/jquery.min.js"></script>
 
   <title>Cadastro</title>

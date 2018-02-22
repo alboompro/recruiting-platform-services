@@ -11,7 +11,7 @@
   <script src="./assets/js/final/min/snap.min.js"></script>
   <script src="./assets/js/final/min/moment.min.js"></script>
   <script src="./assets/js/final/min/countdown.min.js"></script>
-
+  <link rel="shortcut icon" href="//c.fastcdn.co/u/945855fc/7076173-0-favicon.png" type="image/ico">
   <title>Final</title>
 </head>
 <body class="final">
