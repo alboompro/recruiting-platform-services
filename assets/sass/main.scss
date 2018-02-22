@@ -1,0 +1,82 @@
+@import '_generic.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
+html{font-size:62.5%; width: 100%; height: 100%;font-family: 'Lato', sans-serif;}
+.home,.products,.complements,.final{@include flex-all-center; height: 100%; width: 100%; }
+
+// reusable blocks
+.top{@include flex; width: 100%;  height: 9rem;}
+.top-img img{height: 6rem; margin: 2rem 2rem;}
+.top-description{text-align:right; width:60rem; margin-right: 1rem;}
+.top-description-title{font-size: $font-title;  letter-spacing: 3px; color: $color-brown;}
+.top-description-alboom{font-family: 'PT Sans'; color: $color-grey;font-size: $font-sub;letter-spacing: 1.1px; margin-bottom: 1rem;}
+
+.box-details{@include flex; }
+.box-details-img img{height: 6rem; margin: 2rem .6rem .5rem 2rem;}
+.box-details-description{@include flex; @include flex-y-center;justify-content: space-between; width: 100%;}
+.box-details-description-titles{margin-left: 1rem;}
+.box-details-description-titles-name{@include name-coffe;}
+.box-details-description-titles-time{@include time; @include flex-y-center;}
+.icon-clock {@include icon-clock};
+
+.style-check{ display: block; height: auto; width: 3rem; cursor: pointer; margin-right:3rem;}
+.style-check input{ @include check;}
+.style-check input:active, input:checked:active{ background-color:$color-green; border-color: $color-white; }
+.style-checked{@include check-ok;}
+
+
+// home
+.home-box{@include border; height: 48rem; width: 32rem;}
+.home-box-img{@include flex-x-center; width: 100%; }
+.home-box-img img{height: 12rem; margin: 2.5rem auto ;}
+
+.home-box-form{@include flex-column; margin: 3rem auto; padding: 0 2rem;}
+.home-box-form-name, .home-box-form-email{@include flex-column; margin-bottom: 1rem; }
+.home-box-form-name label, .home-box-form-email label {font-size: $font-label; letter-spacing: 0.8px;color: $color-grey; margin-bottom: 1rem;}
+.home-box-form-name input, .home-box-form-email input {height: 4rem; font-size: $font-input;}
+
+.home-box-form-button{@include flex-right}
+.home-box-form-button input{@include button; cursor: pointer; width: 18rem; background-color: $color-blue;}
+
+// products
+.separator{@include line;}
+.separator-main{@include line; height: 2px;}
+.products-box{@include border; height: auto; width: 32rem; }
+.products-box-button input{@include button; background-color: $color-blue; width: 100%;}
+.alert{color:$color-red-intense; font-size: $font14; margin:1rem; margin-bottom:0; font-weight: bold; text-align: center;}
+
+// complements
+.complements-box{@include border; height: 60rem; overflow: scroll; width: 33rem;}
+.complements-box-additional-side{@include flex; width: 80%;}
+.complements-box-title{text-align: center; color:$color-brown-clean2; margin: 1rem; letter-spacing: -0.3px; font-size: $font-label; font-family: 'PT Sans Caption';}
+.complements-box-additional{@include flex; width: 100%;justify-content: flex-end;  }
+.complements-box-additional-side-img img{height: 4rem; margin:  1rem .6rem .5rem 1rem;}
+.complements-box-additional-side-details{@include flex; @include flex-y-center; justify-content:space-between ;  width: 100%;}
+.complements-box-additional-side-details-titles-name{@include name-coffe-complements;}
+.complements-box-additional-side-details-titles-time{@include time-complements; @include flex-y-center;}
+
+.style-check input{width: 2rem; height: 2rem;}
+.separator-complements { @include line;}
+
+.complements-box-button{display:flex;width: 100%;}
+.complements-box-button input{ @include button; width:100%;}
+.complements-box-button a{width: 50%;}
+.complements-box-button-red{background-color:$color-red;}
+.complements-box-button-green{background-color: $color-green;}
+
+// final
+.final-box{@include border;height: auto; width: 32rem;}
+.final-box-title{padding: 3rem;}
+.final-box-title h1{font-size: $font-final; color: $color-brown; font-weight: normal; font-family: 'PT Sans Caption'; text-align: center;}
+.final-box-cupon{@include flex-x-center; margin: 3rem; border: 4px solid $color-border; border-style: dashed;}
+.final-box-button{ @include flex-x-center; padding-left: 1rem; }
+.final-box-button input{@include button; margin-right: 1rem; margin-bottom: 2rem;}
+.final-box-button-reload{@include flex-all-center; border: 1px solid $color-border2; background-color: $color-grey-btn; margin-right: 1rem; width: 16%; height: 4.9rem;}
+.final-box-button-reload img{width: 30px; height: 26.9px;}
+.final-box-button-print{width:70%; background-color:$color-blue; }
+
+.final-box-countdown{@include flex-all-center}
+.c-container {position: relative;width: 200px;}
+.c-text {position: absolute;width: 100%;text-align: center;color: $color-brown;font-size: $font-input;font-weight:bold;line-height: 30px;top: 50%;margin-top: -15px;}

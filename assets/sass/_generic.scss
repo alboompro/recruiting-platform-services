@@ -1,0 +1,48 @@
+//variables
+$color-border: #BCB5B9;
+$color-border2: #bfbfbf;
+$color-grey: #858585;
+$color-grey-clean: #979797;
+$color-blue:  #34495e;
+$color-white: #fff;
+$color-brown: #503a23;
+$color-brown-clean: #887a6a;
+$color-brown-clean2: #7c6e5f;
+$color-green: #48D2A0;
+$color-red: #d15f41;
+$color-red-intense: red;
+$color-grey-btn: #cacaca;
+
+$font-label: 15px;
+$font-input: 20px;
+$font14: 14px;
+$font-title: 29px;
+$font-sub: 11px;
+$font-time: 10px;
+$font-sub-complements: 12px;
+$font-final: 26px;
+
+// mixins
+@mixin flex{display:flex;}
+@mixin flex-x-center{display: flex; justify-content: center;}
+@mixin flex-y-center{display: flex;align-items: center;}
+@mixin flex-all-center{display: flex; align-items: center;justify-content: center;}
+@mixin flex-column{display: flex; flex-direction: column;}
+@mixin flex-right{display: flex; justify-content: flex-end;}
+
+@mixin border{border: 1px solid $color-border;}
+@mixin button{cursor:pointer; height: 5rem; letter-spacing: 2.4px; font-size: $font14;border:none;color:$color-white;}
+@mixin line{content:''; width: 90%; height:1px; display: block; background-color: $color-grey-clean ; margin: 0 auto; opacity: 0.41;}
+@mixin name-coffe{color:$color-brown-clean; font-weight:normal;  letter-spacing: 0.8px; font-size: $font14;}
+@mixin name-coffe-complements{font-size: $font-sub-complements; letter-spacing: 1.2px; color: $color-brown-clean; font-weight: normal;}
+@mixin time-complements{font-weight: normal; font-size: $font-time; color: $color-brown-clean2;}
+@mixin icon-clock{padding-right: .4rem;width: 13px;height: 13px;};
+@mixin time{font-weight: normal; font-size: $font-time; color: $color-brown-clean2;}
+@mixin check{height: 3rem; width: 3rem; margin-right: 1.5rem; -webkit-appearance: none; background-color: rgba(0, 0, 0, 0); border: 2px solid #cbd3d0; border-radius: 50%; cursor: pointer; transition: .15s;}
+@mixin check-ok{background: url('../images/check-ok.svg') no-repeat center center; background-size: 100%; border: none; transition: .15s;}
+
+// breakpoints
+
+@media screen and (max-width: 320px) {
+  .products-box,.complements-box,.final-box {margin-top: 5rem;}
+}
