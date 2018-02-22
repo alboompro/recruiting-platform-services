@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.Rectangle {
+  margin: 100px auto;
+}
+
+.Rectangle2 {
+  margin: 100px auto;
+}

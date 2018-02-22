@@ -1,25 +1,22 @@
 <html>
+</head>
+  <link rel="stylesheet" href="assets/login.css">
+</head>
 <body>
-            
-  <div class="Rectangle"> 
-    <%= image_tag "coffee.svg", class: 'coffee' %>
-
-    <div class="Default">
-      <label> Nome Completo</label>
-      <input class="Base_ghost" > 
-    </div>
-
-    <div class="Default">
-      <label>Email</label>
-      <input class="Base_ghost" > 
-    </div>
-
-    <button class="Base_buttons">
-      <p class="Label_btn">CADASTRAR
-      </p> 
-  </button>
-  
+  <!--Bloco Cadastro Cliente -->              
+  <div class="Rectangle">
+    <form>
+      <%= image_tag "coffee.svg", class: 'coffee' %>
+      <label class="label"> Nome Completo</label>
+      <input type="text" class="Base_ghost" required="required" >
+      <label class="label">Email</label>
+      <input type="email" class="Base_ghost"  required="required">
+      <button onclick="window.location.href='/smart_coffee/produtos'" class="Base_buttons"> 
+        <p class="Label-btn">CADASTRAR</p> 
+      </button>
+    </form>
   </div>
-
+  <!--Fim Bloco Cadastro Cliente -->  
 </body>
 </html>
+

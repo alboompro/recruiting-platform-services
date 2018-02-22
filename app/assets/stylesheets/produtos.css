@@ -69,7 +69,7 @@
 }
 
 .Donuts---Super-reche {
-  margin-top:  -45px;
+  margin-top:  -60px;
   margin-left: 85px;
   width: 175px;
   height: 14px;
@@ -85,18 +85,18 @@
 }
 
 .Line-break {
-   margin-top:  15px;
-   margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
   width: 280px;
   height: 3px;
   border: solid 1px rgba(211, 211, 211, 0.45);
 }
 
-.-min  {
-
-margin-top:  -16px;
+.-min {
+  margin-top:  -16px;
   margin-left: 100px;
-  width: 38px;
+  width: 45px;
   height: 12px;
   font-family: PTSans;
   font-size: 10px;
@@ -119,8 +119,8 @@ margin-top:  -16px;
 
 .Oval {
   position: absolute;
-   margin-left: 270px;
-   margin-top:  10px;
+  margin-left: 270px;
+  margin-top:  10px;
  
   width: 30px;
   height: 30px;
@@ -143,7 +143,8 @@ margin-top:  -16px;
   height: 42px;
   background-color: #34495e;
 }
-.Default {
+.Label-btn {
+  margin-top: 10px;
   margin-left: 100px;
   width: 82px;
   height: 19px;

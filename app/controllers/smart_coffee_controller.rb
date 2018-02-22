@@ -1,5 +1,7 @@
 class SmartCoffeeController < ApplicationController
-  def login
-    
+  def produtos
+     @produtos = Recipe.all
   end
+
+
 end
