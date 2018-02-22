@@ -48,7 +48,8 @@
           <a data-js="continue" ><input type="submit" value="CONTINUAR"/></a>
       </div>
   </div>
-  <script src="./assets/js/products/handleCheck.js"></script>
-  <script src="./assets/js/products/main.js"></script>
+
+<script src="./assets/js/products/min/handleCheck.min.js"></script>
+<script src="./assets/js/products/min/main.min.js"></script>
 </body>
 </html>

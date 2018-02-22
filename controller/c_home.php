@@ -5,18 +5,13 @@ class c_home
 {
   function login()
   {
-    if(isset($_SESSION['id'])){
-      session_destroy();
-    }
     
     if($_POST){       
       $name   = $_POST["name"];
       $email  = $_POST["email"];
       $coupon = $_POST["coupon"];
 
-      if($name && $email != ''){ 
-        $this -> insertUser($name,$email,$coupon);
-      } 
+      if($name && $email != ''){  $this -> insertUser($name,$email,$coupon);} 
 
       $ret = $this -> getUserByEmail($email);
 

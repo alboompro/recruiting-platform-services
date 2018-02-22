@@ -6,7 +6,6 @@ class c_products
   function show()
   {
     $ret = $this -> allProducts();
-
     require_once "view/products.php";
   }
 

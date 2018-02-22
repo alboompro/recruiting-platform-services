@@ -73,7 +73,7 @@
     </div>
   </div>
  
-  <script src="./assets/js/complements/main.js"></script>
-  <script src="./assets/js/complements/handleCheck.js"></script>
+  <script src="./assets/js/complements/min/main.min.js"></script>
+  <script src="./assets/js/complements/min/handleCheck.min.js"></script>
 </body>
 </html>

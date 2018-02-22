@@ -1,41 +1,44 @@
-var form = document.querySelector('[data-js="form-home"]');
+(function(){
+  var form = document.querySelector('[data-js="form-home"]');
 
-function code(){
-  var codigo    = '';
-  var letras    = ['W','X','Y','Z','F','B','C','K','G','B'];
-  var numeracao = Math.random();
-  var string    = String(numeracao);
-  var string    = string.split('.');
-  var numeros   = string[1].split('');
-  for(var i=0;i<3;i++){
-    codigo+=numeros[i]+letras[numeros[i]];	
+  function code(){
+    var codigo    = '';
+    var letras    = ['W','X','Y','Z','F','B','C','K','G','B'];
+    var numeracao = Math.random();
+    var string    = String(numeracao);
+    var string    = string.split('.');
+    var numeros   = string[1].split('');
+    for(var i=0;i<3;i++){
+      codigo+=numeros[i]+letras[numeros[i]];	
+    }
+    return codigo;
   }
-  return codigo;
-}
 
-form.addEventListener('submit',function(e){
-  e.preventDefault();
-  var name   = document.querySelector('[data-js="name"]').value;
-  var email  = document.querySelector('[data-js="email"]').value;
-  var email = document.querySelector('[data-js="email"]');
-  var email_value
-  var coupon = code();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name   = document.querySelector('[data-js="name"]').value;
+    var email  = document.querySelector('[data-js="email"]').value;
+    var coupon = code();
 
-  $.ajax({
-    url: "index.php?controller=c_home&method=login",
-    type: "POST",
-    data: "name="+name+"&email="+email+"&coupon="+coupon,
-    dataType: "html"
+    $.ajax({
+      url: "index.php?controller=c_home&method=login",
+      type: "POST",
+      data: "name="+name+"&email="+email+"&coupon="+coupon,
+      dataType: "html"
 
-  }).done(function(resposta) {
-    window.location="index.php?controller=c_products&method=show";
-  }).fail(function(jqXHR, textStatus ) {
-    console.log("Request failed: " + textStatus);
+    }).done(function(resposta) {
+      if(resposta.indexOf('Erro') !== -1 ){
+        alert('Este e-mail ja foi cadastrado!');
+      }
+      else{
+        window.location="index.php?controller=c_products&method=show";
+      }
+    }).fail(function(jqXHR, textStatus ) {
+      console.log("Request failed: " + textStatus);
+
+    });
 
   });
 
-});
-
-
-
+})()
 

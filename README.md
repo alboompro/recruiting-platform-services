@@ -27,7 +27,7 @@ $ npm install
 ```
 
 **Terceiro Passo**: Certifique-se de que os dados no arquivo model/conexao.php estejam corretos:
-![Arquivo conexao](http://i65.tinypic.com/rh086r.png)
+![Arquivo conexao](http://i68.tinypic.com/2djx9gy.png)
 
 
 **Passo Adicional**: Caso queira fazer alterações na folha de estilo do projeto, rode no terminal antes:

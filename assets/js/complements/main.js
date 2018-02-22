@@ -19,7 +19,7 @@
     return element.className === 'style-checked';
   }
 
-  function beginMainArray(id,time,recipe,recipe1,recipe2){
+  function mainObject(id,time,recipe,recipe1,recipe2){
     if ( recipe1 == recipe ) {
       datas.complements.push(id);
       datas.times.push(time);
@@ -61,13 +61,12 @@
  
   btnNext.addEventListener('click',function(event){
     event.preventDefault();
-  
       checks.forEach(function(atual){
         if(isCheck(atual)){
           var time   = atual.getAttribute('time');
           var recipe = atual.getAttribute('recipe');
           var id     = atual.id;
-          beginMainArray(id,time,recipe,recipe1,recipe2);
+          mainObject(id,time,recipe,recipe1,recipe2);
         }
       })
 
@@ -99,7 +98,6 @@
       window.location="index.php?controller=c_final&method=show";
     }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
-  
     });
 
   })

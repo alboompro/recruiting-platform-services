@@ -29,6 +29,6 @@
       </div>
     </form>
   </div>
-  <script src="./assets/js/home/main.js"></script>
+  <script src="./assets/js/home/min/main.min.js"></script>
 </body>
 </html>

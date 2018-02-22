@@ -25,7 +25,6 @@
         checked.push(element.id);
     });
 
-
       if(checked == ''){
         var div_separator = document.getElementsByClassName('separator-main');
         div_separator[0].insertAdjacentElement('afterend',createElementP());
