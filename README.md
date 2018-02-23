@@ -1,27 +1,18 @@
-# README
+# Teste para recutramento Plataforma e Serviços
+* Este é um projeto enviado pela Alboom para a primeira edição da FENAFAC (Feira Nacional dos Fotógrafos Amantes de Café) onde atraves desse aplicativo irá gerar um cupom através de um totem de autoatendimento onde o cliente  poderá solicitar e apreciar um delicioso café.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby version 
+*2.5.0
 
-Things you may want to cover:
+# Banco de dados
 
-* Ruby version 2.5
-
-* System dependencies
-
-* Configuration
-
-* Database creation
     bundle exec rails db:create
+    bundle exec rails db docs/database.sql
 
-* Database initialization
-    bundle exec rails db < docs/database.sql
+# Como instalar
+* bundle install recruiting-platform-services
 
-* How to run the test suite
-http://localhost:3000/
+# Como Usar
 
-* Services (job queues, cache servers, search engines, etc.)
+   * Abra o seu navegador no seguinte endereço: http://localhost:3000/
 
-* Deployment instructions
-
-* ...
