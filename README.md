@@ -18,6 +18,7 @@ Things you may want to cover:
     bundle exec rails db < docs/database.sql
 
 * How to run the test suite
+http://localhost:3000/
 
 * Services (job queues, cache servers, search engines, etc.)
 

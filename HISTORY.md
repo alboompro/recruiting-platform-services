@@ -27,7 +27,8 @@ pesquisas de como fazer funcionar codigos js no rails, no projeto não funcionou
 o cadastro de clientes só achei uma forma de guardar o valor no banco porem iria quebrar o padrão visual da pagina
 como não ia dar tempo de fazer o back-end funcionar decidir focar no front-end
 ### Dia 21/02
+estudo do ruby on rails
 desenvolvimento da tela final
 ### Dia 22/02
+estudo do ruby on rails
 indentação do codigo e acertos finais
-publicação no heroku
