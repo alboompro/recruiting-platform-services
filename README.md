@@ -14,5 +14,5 @@
 
 # Como Usar
 
-   * Abra o seu navegador no seguinte endereço: http://localhost:3000/
+   * Abra o seu navegador no seguinte endereço: http://localhost:3000
 
