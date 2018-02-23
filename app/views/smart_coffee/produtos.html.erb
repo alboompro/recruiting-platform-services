@@ -1,0 +1,45 @@
+<html>
+<body>
+<head>
+  <link rel="stylesheet" href="assets/produtos.css">
+</head>
+
+  <!--Bloco Pagina -->          
+  <div class="Rectangle"> 
+    <%= image_tag "coffee.svg", class: 'coffee' %>
+    <div class="Smart-coffee">
+      <p>Smart Coffee</p>
+    </div>
+    <div class="by-Alboom">
+      <p>by Alboom</p>
+    </div>
+    <div class="Line">
+    </div>
+    <!--Bloco lista produtos do banco -->
+    <% @produtos.each do |recipe| %>
+      <div class="Product">
+        <input type="checkbox" class="Oval">
+        <img src="/assets/<%= recipe.photo.gsub /^images\//, '' %>" class="cafe-img"  />
+        <div class="Donuts---Super-reche">
+          <p><%= recipe.name%></p>   
+        </div> 
+        <img src="/assets/circle-backup-time-history-recent-time-machine-outline-stroke.svg" class="circle_backup_time_history_recent_time-machine_outline_stroke" />  
+        <div class="-min">
+         <%= recipe.preparation_time %> min  
+        </div> 
+        <div class="Line-break">
+        </div>
+      </div>
+    <% end %>
+    <!-- Fim Bloco lista produtos do banco -->
+
+    <!--Botão Continuar --> 
+    <button onclick="window.location.href='/smart_coffee/acrescimos'" class="Base_buttons"  type="submit">
+      <p class="Label-btn">CONTINUAR</p> 
+    </button>
+    <!--Fim Botão Continuar --> 
+  </div>
+  <!--Fim  Pagina --> 
+
+</body>
+</html>

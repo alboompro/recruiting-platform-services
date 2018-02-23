@@ -1,0 +1,93 @@
+.coffee {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.Smart-Coffee {
+  width: 196px;
+  height: 34px;
+  font-family: PTSans; 
+  font-size: 29px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #503a23;
+}
+.by-Alboom {
+  margin-left: 237px;
+  width: 60px;
+  height: 13px;
+  font-family: PTSans;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-align: left;
+  color: rgba(80, 58, 35, 0.62);
+}
+.Pedido-realizado-com {
+  margin-top: 39px;
+  margin-left: 40px;
+  width: 239px;
+  height: 60px;
+  font-family: PTSans-Caption;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #5e4429;
+}
+.cupom {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 100px;
+  width: 239px;
+  height: 30px;
+  font-family: PTSans-Caption;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #5e4429;
+}
+
+.print-btn {
+  position: absolute;
+  margin-top: 240px;
+  margin-left: 12px;
+  width: 224px;
+  height: 49px;
+  background-color: #34495e;
+}
+.back-btn {
+  margin-top: 240px;
+  margin-left: 20px;
+  width: 49px;
+  height: 49px;
+  background-color: #cacaca;
+}
+
+.Default {
+  margin-left: 60px;
+  width: 57px;
+  height: 19px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: 2.4px;
+  text-align: center;
+  color: #ffffff;
