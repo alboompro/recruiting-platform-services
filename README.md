@@ -2,9 +2,9 @@
 
 ### A Alboom
 
-A Alboom é hoje a maior plataforma de serviços digitais para fotógrafos e artistas visuais da América Latina. A Alboom engloba a maior diversidade de produtos e serviços para fotógrafos, contando com sites profissionais, aprovação de fotos, aprovação de álbum, aprovação de vídeos, criação de galerias, CRM para fotógrafos e muito mais. Além disso temos como missão ser uma plataforma multi aplicação possuindo uma gigantesca camada de micro-serviços entregando a melhor experiência para nossos usuários.
+A Alboom é hoje a maior plataforma de serviços digitais para fotógrafos e artistas visuais da América Latina. Englobamos a maior diversidade de produtos e serviços para fotógrafos, contando com sites profissionais, aprovação de fotos, aprovação de álbum, aprovação de vídeos, criação de galerias, CRM para fotógrafos e muito mais. Além disso temos como missão ser uma plataforma multi aplicação possuindo uma gigantesca camada de micro-serviços entregando a melhor experiência para nossos usuários.
 
-A Alboom reconhece a importância da igualdade de oportunidades e o respeito ao ser humano. Valorizamos a diversidade e temos convicção de que todos podem fazer algo que mudará o mundo ou a vida de alguém para melhor.
+Reconhece a importância da igualdade de oportunidades e o respeito ao ser humano. Valorizamos a diversidade e temos convicção de que todos podem fazer algo que mudará o mundo ou a vida de alguém para melhor.
 
 ### Contexto do projeto
 
@@ -13,11 +13,9 @@ Como forma de inovar e mostrar que o cliente é sempre a sua maior preocupação
 
 Cada fotógrafo terá direito de solicitar um único pedido contendo, no máximo, dois itens. Para solicitar o pedido, a pessoa deverá informar seu **nome** e **e-mail**.
 
-No próximo passo, utilizando nosso cardápio, ele poderá escolher entre diferentes receitas, assim como personalizá-las, adicionando complementos ao seu pedido. Ao final do pedido, será contabilizado o tempo total de preparo dos itens escolhidos,
- que será utilizado para alimentar uma contagem regressiva, o que aumentará ainda mais a vontade deste fotógrafo sedento de cafeína!!!!
+No próximo passo, utilizando nosso cardápio, ele poderá escolher entre diferentes receitas, assim como personalizá-las, adicionando complementos ao seu pedido. Ao final do pedido, será contabilizado o tempo total de preparo dos itens escolhidos, que será utilizado para alimentar uma contagem regressiva, o que aumentará ainda mais a vontade deste fotógrafo sedento de cafeína!!!!
 
-Porém, enquanto aguarda, nosso querido amigo e potencial cliente poderá solicitar a impressão de seu _cupom_ de desconto para adquirir um de nossos produtos. Esperamos que o nosso querido 
-fotógrafo possa voltar às atividades da feira em posse do seu cupom de desconto e de seu delicioso café, fornecidos eficientemente pelo nosso inovador totem de autoatendimento para fotógrafos apreciadores de café!
+Porém, enquanto aguarda, nosso querido amigo e potencial cliente poderá solicitar a impressão de seu _cupom_ de desconto para adquirir um de nossos produtos. Esperamos que o nosso querido  fotógrafo possa voltar às atividades da feira em posse do seu cupom de desconto e de seu delicioso café, fornecidos eficientemente pelo nosso inovador totem de autoatendimento para fotógrafos apreciadores de café!
 
 ### Instruções
 
@@ -25,9 +23,9 @@ fotógrafo possa voltar às atividades da feira em posse do seu cupom de descont
 1. Faça um fork e clone do projeto;
 1. Crie uma branch (utilize seu nome);
 1. Execute o arquivo SQL presente no projeto para criar e popular seu banco de dados;
-1. Estude as telas que estão no [zeplin](https://zeplin.io/) (foi enviado um convite para você acessar o projeto em seu e-mail);
+1. Estude as telas que estão no [zeplin](https://scene.zeplin.io/project/5a79d3ac106e052f5474d94a);
 1. Crie uma aplicação implementando uma solução para o cenário apresentado;
-8. Submeta o Pull Request e envie um email para lelo@alboom.com.br;
+8. Submeta o Pull Request e envie um email para vagas@alboom.com.br;
 
 **PS:** Usamos o mesmo teste para todos os níveis: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando.
 
@@ -41,12 +39,12 @@ fotógrafo possa voltar às atividades da feira em posse do seu cupom de descont
 
 ### Você também pode, por exemplo
 
-* Utilize frameworks como rails, laravel, express ou similar;
+* Utilizar frameworks como rails, laravel, express ou similar;
 * Utilizar bibliotecas javascript como AngularJS, ReactJS, Vue.js ou similar;
 * Utilizar um pré-processador de CSS (Scss, Stylus);
 * Utilizar um task runner de sua preferência;
 * Utilizar bibliotecas CSS como Compass, Bourbon, AnimateCSS ou similar;
-* Utilzar frameworks CSS como Bootstrap e Foundation;
+* Utilizar frameworks CSS como Bootstrap e Foundation;
 * Deixar sua aplicação online usando Heroku;
 
 ### Ganhe pontos extras por:
