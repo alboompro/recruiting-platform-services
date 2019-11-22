@@ -25,7 +25,7 @@ Porém, enquanto aguarda, nosso querido amigo e potencial cliente poderá solici
 1. Execute o arquivo SQL presente no projeto para criar e popular seu banco de dados;
 1. Estude as telas que estão no [zeplin](https://scene.zeplin.io/project/5a79d3ac106e052f5474d94a);
 1. Crie uma aplicação implementando uma solução para o cenário apresentado;
-8. Submeta o Pull Request e envie um email para vagas@alboom.com.br;
+8. Submeta o Pull Request e envie um email para recruit@alboompro.com;
 
 **PS:** Usamos o mesmo teste para todos os níveis: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando.
 
