@@ -1,25 +1,40 @@
 class Api::V1::SubmitController < ApplicationController
     # POST - /api/v1/submit
     def create
-        client_id = params[:client_id]
-        recipe_id = params[:recipe_id]
-        ingredients_id = params[:ingredients_id]
+        client_name = params[:client_name]
+        client_email = params[:client_email]
+        recipes = params[:recipes]
 
-        client_recipe = ClientRecipe.new
-        client_recipe.recipe_id = recipe_id
-        client_recipe.client_id = client_id
-        client_recipe.created_at = DateTime.now
+        coupon_code = generate_coupon_code
 
-        client_recipe.save
+        client = Client.new
+        client.name = client_name 
+        client.email = client_email 
+        client.coupon_code = coupon_code 
+        client.created_at = DateTime.now
+        client.save
+        
+        recipes.each do |recipe|
+            client_recipe = ClientRecipe.new
+            client_recipe.recipe_id = recipe["recipe_id"]
+            client_recipe.client_id = client.id
+            client_recipe.created_at = DateTime.now
+            client_recipe.save
 
-        ingredients_id.each do |ingredient|
-            client_recipe_ingredient = ClientRecipeIngredient.new
-            client_recipe_ingredient.ingredient_id = ingredient
-            client_recipe_ingredient.client_recipe_id = client_recipe.id
-
-            client_recipe_ingredient.save
+            recipe["ingredients"].each do |ingredient_id|
+                client_recipe_ingredient = ClientRecipeIngredient.new
+                client_recipe_ingredient.ingredient_id = ingredient_id
+                client_recipe_ingredient.client_recipe_id = client_recipe.id
+                client_recipe_ingredient.save
+            end
         end
 
         render :nothing => true, :status => :ok
+    end
+
+    private
+
+    def generate_coupon_code
+        return (0...8).map { (65 + rand(26)).chr }.join
     end
 end
