@@ -7,7 +7,7 @@ export default () => (
   <Container>
     <ContainerBody>
       <Header />
-      <Divider height="3px" marginbottom="27px" />
+      <Divider style={{height: "3px", "margin-bottom": "27px"}} />
       <ListViewItem>
         <Image src={dualcoffee} alt="logo" />
         <div>
@@ -15,7 +15,7 @@ export default () => (
           <span>0:45 min</span>
         </div>
       </ListViewItem>
-      <Divider height="1px" marginbottom="20px" />
+      <Divider style={{height: "1px", "margin-bottom": "20px"}} />
       <ListViewItem>
         <Image src={dualcoffee} alt="logo" />
         <div>
@@ -23,7 +23,7 @@ export default () => (
           <span>0:45 min</span>
         </div>
       </ListViewItem>
-      <Divider height="1px" marginbottom="20px" />
+      <Divider style={{height: "1px", "margin-bottom": "20px"}} />
       <ListViewItem>
         <Image src={dualcoffee} alt="logo" />
         <div>
@@ -31,7 +31,7 @@ export default () => (
           <span>0:45 min</span>
         </div>
       </ListViewItem>
-      <Divider height="1px" marginbottom="20px" />
+      <Divider style={{height: "1px", "margin-bottom": "20px"}} />
       <ListViewItem>
         <Image src={dualcoffee} alt="logo" />
         <div>
@@ -39,7 +39,7 @@ export default () => (
           <span>0:45 min</span>
         </div>
       </ListViewItem>
-      <Divider height="1px" marginbottom="20px" />
+      <Divider style={{height: "1px", "margin-bottom": "20px"}} />
     </ContainerBody>
     <ContainerButton>
       <button>Continuar</button>

@@ -52,7 +52,7 @@ export const CircleCheckbox = styled.input.attrs({ type: 'checkbox' })`
 `
 
 export const Divider = styled.div`
-  height: ${props => props.height};
+  ${props => props.style};
   margin-bottom: ${props => props.marginbottom};
   width: 100%;
   background-color: rgba(211, 211, 211, 0.45);
