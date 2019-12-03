@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Image, ListViewItem, Divider, ContainerBody, ContainerButton, Checkbox, ContainerCheckBox } from './styles'
+import { Container, Image, ListViewItem, ContainerBody, ContainerButton, Checkbox, ContainerCheckBox } from './styles'
 import Header from '../header';
+import Divider from '../divider';
 import dualcoffee from '../../assets/images/cafe-duplo.svg';
 
 export default () => (

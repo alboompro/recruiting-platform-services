@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   background-color: #f9f9f9;
@@ -12,9 +12,12 @@ export const ContainerBody = styled.div`
   padding: 20px 20px;
 `
 
-export const Image = styled.img`
-  width: 60px;
-  height: 60px;
+export const Description = styled.span`
+  font-size: 15px;
+  color: #7c6e5f;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
 `
 
 export const ListViewItem = styled.div`
@@ -39,6 +42,24 @@ export const ListViewItem = styled.div`
     }    
   }
 `
+
+export const ComplementsContainer = styled.div`
+  display: flex;
+  flex-direction: column;  
+  margin-left: 67px;
+  margin-bottom: 16px;
+
+  img {
+    width: 41px;
+    height: 41px;
+  }
+`
+
+export const Image = styled.img`
+  width: 60px;
+  height: 60px;
+`
+
 export const ContainerCheckBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,18 +81,24 @@ export const ContainerButton = styled.div`
   display: flex;
   align-items: flex-end;
   height: 100%;
+`
 
-  button {
-    width: 100%;
+export const Button = styled.button`
+  width: 100%;
     height: 50px;
-    background-color: #34495e;
     font-size: 14px;
     letter-spacing: 2.36px;
     text-align: center;
     color: #ffffff;
     border: none;
     text-transform: uppercase;
-    margin-bottom: 53px;
     cursor: pointer;
-  }
+
+    ${props => props.back && css`
+      background-color: #d15f41;
+    `};
+
+    ${props => props.submit && css`
+      background-color: #3dc890;
+    `};
 `
