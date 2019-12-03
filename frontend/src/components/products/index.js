@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Image, ListViewItem, Divider, ContainerBody, ContainerButton } from './styles'
+import { Container, Image, ListViewItem, Divider, ContainerBody, ContainerButton, Checkbox, ContainerCheckBox } from './styles'
 import Header from '../header';
 import dualcoffee from '../../assets/images/cafe-duplo.svg';
 
@@ -14,6 +14,9 @@ export default () => (
           <span>Café Duplo</span>
           <span>0:45 min</span>
         </div>
+        <ContainerCheckBox>
+          <Checkbox checked={false} onChange={(e) => console.log(e)}/>
+        </ContainerCheckBox>
       </ListViewItem>
       <Divider style={{height: "1px", "margin-bottom": "20px"}} />
       <ListViewItem>

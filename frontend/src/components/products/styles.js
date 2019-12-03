@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const Container = styled.div`
   background-color: #f9f9f9;
@@ -36,24 +36,28 @@ export const ListViewItem = styled.div`
       &:last-child {
         font-size: 10px;
       }
-    }
-    
+    }    
   }
 `
-
-export const CircleCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
+export const ContainerCheckBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`
+export const Checkbox = styled.input.attrs({type: 'checkbox'})`
   height: 28px;
   width: 28px;
-  background-color: ${props => props.checked ? '#66bb6a' : '#fff'};
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  -webkit-appearance: none;
+
+  ${props => props.checked && css`
+    background-color: #66bb6a;
+  `}
 `
 
 export const Divider = styled.div`
   ${props => props.style};
-  margin-bottom: ${props => props.marginbottom};
   width: 100%;
   background-color: rgba(211, 211, 211, 0.45);
 `
