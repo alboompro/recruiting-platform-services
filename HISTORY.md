@@ -7,9 +7,10 @@
 	- React para Front-end;
 	- Ruby com framework Rails para back-end.
 - Especificação dos endpoints da API (Backend)
-	- Endpoint** /api/v1/signup**: Responsável por validar se o usuário já obteve o benefício;
+	- Endpoint **/api/v1/signup**: Responsável por validar se o usuário já obteve o benefício;
 	- Endpoint **/api/v1/product**: Reponsável por obter os produtos cadastrados na base;
-	- Endpoint **/api/v1/product/{:id}/ingredients**: Reponsável por obter os complementos do produto escolhido.
+	- Endpoint **/api/v1/product/{:id}/ingredients**: Reponsável por obter os complementos do produto escolhido;
+	 Endpoint **/api/v1/submit**: Responsável por submeter os dados informados pelo usuário.
 - Implementação dos endpoints da API (Backend)
 
 #####01/12/2019
@@ -19,3 +20,8 @@
 
 #####02/12/2019
 - Criação da tela de produtos (Frontend)
+
+#####03/12/2019
+- Criação da tela de complementos (Frontend)
+- Criação da tela final (Frontend)
+- Correções de layout e algumas refatorações
