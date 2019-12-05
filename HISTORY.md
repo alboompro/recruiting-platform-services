@@ -25,3 +25,11 @@
 - Criação da tela de complementos (Frontend)
 - Criação da tela final (Frontend)
 - Correções de layout e algumas refatorações
+
+#####04/12/2019
+- Estudo mais aprofundado do React sobre implementação de lógica nas telas
+- Implementação da lógica na tela de cadastro
+
+#####05/12/2019
+- Implementação da lógina na tela de produtos
+- Correções de layout
