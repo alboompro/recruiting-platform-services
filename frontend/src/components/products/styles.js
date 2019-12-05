@@ -21,39 +21,28 @@ export const ListViewItem = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
+  
   div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
     margin-left: 8px;
+    width: 40%; 
 
     span {
       font-size: 14px;
       line-height: 1;
       letter-spacing: 0.75px;
-      color: #887a6a;
-
-      &:last-child {
-        font-size: 10px;
-      }
+      color: #887a6a;      
     }    
   }
 `
 export const ContainerCheckBox = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
-`
-export const Checkbox = styled.input.attrs({type: 'checkbox'})`
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  -webkit-appearance: none;
-
-  ${props => props.checked && css`
-    background-color: #66bb6a;
-  `}
+  justify-content: flex-end;
+  position: relative;
+  cursor: pointer;
 `
 
 export const ContainerButton = styled.div`
