@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-export default function getBase() {
+let request = null
+
+export function getRequest() {
   request = axios.create({
       baseURL: 'http://localhost:3001',
       timeout: 1000

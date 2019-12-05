@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 import coffee from '../../assets/images/coffee.svg';
-import { Container, Label, Button, ContainerInputs, Logo } from './styles'
-import axios from '../../utils/base-axios'
+import { Container, Label, Button, ContainerInputs, Logo, Popup } from './styles'
+import { getRequest } from '../../utils/base-axios'
 
 class Signup extends Component {
   
   state = {
     name: "",
-    email: ""
+    email: "",
+    erro: ""    
   }
 
   handleSignup = e => {
     e.preventDefault()
     
-    axios.get(`/api/v1/signup?email=${this.state.email}`)
-      .then(res => {
-         alert(res.status)
+    getRequest().get(`/api/v1/signup?email=${this.state.email}`)
+      .then(res => {         
+        if(res.status === 200){
+          this.props.history.push("/products")
+        }
+      })
+      .catch(error => {
+        if(error.response.status === 401){
+          this.setState({erro: "Desculpe. E-mail já cadastrado!"})
+        }
+        else{
+          this.setState({erro: "Ops! Ocorreu um erro."})
+        }
       })
   }
   
@@ -33,10 +44,13 @@ class Signup extends Component {
               <span>E-mail</span>
               <input type="text" onChange={e => this.setState({email: e.target.value})} ></input>
             </Label>
-            <Button type="submit">Cadastrar</Button>
+            <Popup style={this.state.erro === "" ? {display: "none"} : {display: "flex"}}>
+              <span>{this.state.erro}</span>
+            </Popup>
+            <Button type="submit">Cadastrar</Button>            
           </ContainerInputs>
         </form>
-      </Container>
+      </Container>      
     );
   }
 }
