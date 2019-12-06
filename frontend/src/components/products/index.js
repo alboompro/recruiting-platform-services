@@ -32,7 +32,11 @@ class Products extends Component {
 
     const filtredProducts = this.state.products.filter((value) => value.selected === true)
 
-    if(filtredProducts.length > 2){
+    if(filtredProducts.length === 0){
+      this.setState({ erro: "Atenção! Selecionar no minimo 1 item." })
+      return
+    }
+    else if(filtredProducts.length > 2){
       this.setState({ erro: "Atenção! Selecionar apenas 2 itens." })
       return
     }
