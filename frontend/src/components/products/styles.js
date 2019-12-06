@@ -45,6 +45,23 @@ export const ContainerCheckBox = styled.div`
   cursor: pointer;
 `
 
+export const Popup = styled.div`
+  width: 100%;
+  height: 30px;
+  border: solid 1px red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 31px;
+  ${props => props.style}
+
+  span {
+    font-size: 16px;
+    color: red;
+    letter-spacing: -0.57px;
+  }
+`
+
 export const ContainerButton = styled.div`
   display: flex;
   align-items: flex-end;

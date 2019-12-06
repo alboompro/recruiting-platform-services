@@ -1,81 +1,105 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Header from '../header'
 import Divider from '../divider'
-import { Container, ContainerBody, ListViewItem, Image, ContainerCheckBox, 
-  Checkbox, ComplementsContainer, Description, ContainerButton, Button } from './styles'
+import {
+  Container, ContainerBody, ListViewItem, Image, ContainerCheckBox,
+  ComplementsContainer, Description, ContainerButton, Button
+} from './styles'
 import dualcoffee from '../../assets/images/cafe-duplo.svg'
+import { getRequest } from '../../utils/base-axios'
+import Checked from '../../assets/images/check-ok.svg'
+import Unchecked from '../../assets/images/check-empty.svg'
 
-export default () => (
-  <Container>
-    <ContainerBody>
-      <Header/>
-      <Divider style={{height: "3px", "margin-bottom": "27px"}}/>
-      <Description>Adicione complementos ao seu pedido</Description>
-      <ListViewItem>
-        <Image src={dualcoffee} alt="logo" />
-        <div>
-          <span>Café Duplo</span>
-          <span>0:45 min</span>
-        </div>        
-      </ListViewItem>
-      <ComplementsContainer>
-          <ListViewItem>
-            <img src={dualcoffee} alt="logo" />
+class Complements extends Component {
+
+  state = {
+    products: []
+  }
+
+  constructor(props) {
+    super(props)
+  }
+
+  loadData() {
+    const { data } = this.props.location
+    if (data === undefined) {
+      this.props.history.push('/products')
+      return
+    }
+
+    let products = []
+
+    data.map((product) => {
+      getRequest().get(`/api/v1/product/${product.id}/ingredients`)
+        .then(res => {
+          product.ingredients = res.data.slice(0,3)
+          products.push(product)   
+          this.setState({ products: products })       
+        })
+    })
+  }
+
+  handleBackButton = () => this.props.history.push('/products')
+
+  handleFinalButton = () => this.props.history.push('/final')
+
+  handleCheckbox = (productIndex, ingredientindex) => {
+    const array = this.state.products.slice()
+    const ingredients = array[productIndex].ingredients
+    ingredients[ingredientindex].selected = !ingredients[ingredientindex].selected
+    this.setState({ array })
+  }
+
+  componentDidMount() {
+    this.loadData()
+  }
+
+  render() {
+    return (
+      <Container>
+        <ContainerBody>
+          <Header />
+          <Divider style={{ height: "3px", "margin-bottom": "27px" }} />
+          <Description>Adicione complementos ao seu pedido</Description>
+          {this.state.products.map((product, productIndex) =>
             <div>
-              <span>Café Duplo</span>
-              <span>0:45 min</span>
+              <ListViewItem>
+                <Image src={require(`../../assets/${product.photo}`)} alt="logo" />
+                <div>
+                  <span>{product.name}</span>
+                  <span>0:45 min</span>
+                </div>
+              </ListViewItem>
+              <ComplementsContainer>
+              {product.ingredients.map((ingredient, ingredientIndex )=>
+                <div>
+                  <ListViewItem>
+                    <img src={require(`../../assets/${ingredient.photo}`)} alt="logo" />
+                    <div>
+                      <span>{ingredient.name}</span>
+                      <span>{ingredient.preparation_time}</span>
+                    </div>
+                    <ContainerCheckBox>
+                      <img src={ingredient.selected ? Checked : Unchecked}
+                        onClick={() => this.handleCheckbox(productIndex, ingredientIndex)}
+                        htmlFor="checkbox" alt="check" htmlFor="checkbox" />
+                    </ContainerCheckBox>
+                  </ListViewItem>
+                  <Divider style={{ height: "0px", "margin-bottom": "12px" }} />
+                </div>
+              )}
+              </ComplementsContainer>
+              <Divider style={{ height: "1px", "margin-bottom": "16px" }} />
             </div>
-            <ContainerCheckBox>
-              <Checkbox checked={false} onChange={(e) => console.log(e)}/>
-            </ContainerCheckBox>
-          </ListViewItem>
-          <Divider style={{height: "0px", "margin-bottom": "12px"}}/>
-          <ListViewItem>
-            <img src={dualcoffee} alt="logo" />
-            <div>
-              <span>Café Duplo</span>
-              <span>0:45 min</span>
-            </div>
-            <ContainerCheckBox>
-              <Checkbox checked={false} onChange={(e) => console.log(e)}/>
-            </ContainerCheckBox>
-          </ListViewItem>
-        </ComplementsContainer>
-        <Divider style={{height: "1px", "margin-bottom": "16px"}}/>
-        <ListViewItem>
-        <Image src={dualcoffee} alt="logo" />
-        <div>
-          <span>Café Duplo</span>
-          <span>0:45 min</span>
-        </div>        
-      </ListViewItem>
-      <ComplementsContainer>
-          <ListViewItem>
-            <img src={dualcoffee} alt="logo" />
-            <div>
-              <span>Café Duplo</span>
-              <span>0:45 min</span>
-            </div>
-            <ContainerCheckBox>
-              <Checkbox checked={false} onChange={(e) => console.log(e)}/>
-            </ContainerCheckBox>
-          </ListViewItem>
-          <Divider style={{height: "0px", "margin-bottom": "12px"}}/>
-          <ListViewItem>
-            <img src={dualcoffee} alt="logo" />
-            <div>
-              <span>Café Duplo</span>
-              <span>0:45 min</span>
-            </div>
-            <ContainerCheckBox>
-              <Checkbox checked={false} onChange={(e) => console.log(e)}/>
-            </ContainerCheckBox>
-          </ListViewItem>
-        </ComplementsContainer>
-    </ContainerBody>
-    <ContainerButton>
-      <Button back>Voltar</Button>
-      <Button submit>Finalizar</Button>
-    </ContainerButton>
-  </Container>
-)
+          )}
+        </ContainerBody>
+        <ContainerButton>
+          <Button back onClick={this.handleBackButton}>Voltar</Button>
+          <Button submit onClick={this.handleFinalButton}>Finalizar</Button>
+        </ContainerButton>
+      </Container>
+    )
+  }
+}
+
+export default Complements

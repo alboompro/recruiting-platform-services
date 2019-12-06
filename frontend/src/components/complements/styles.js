@@ -29,6 +29,7 @@ export const ListViewItem = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-left: 8px;
+    width: 40%;
 
     span {
       font-size: 14px;
@@ -64,6 +65,12 @@ export const ContainerCheckBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  cursor: pointer;
+
+  img {
+    width: 21px;
+    height: 21px;
+  }
 `
 export const Checkbox = styled.input.attrs({type: 'checkbox'})`
   height: 28px;
@@ -81,6 +88,23 @@ export const ContainerButton = styled.div`
   display: flex;
   align-items: flex-end;
   height: 100%;
+`
+
+export const Popup = styled.div`
+  width: 100%;
+  height: 30px;
+  border: solid 1px red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 31px;
+  ${props => props.style}
+
+  span {
+    font-size: 16px;
+    color: red;
+    letter-spacing: -0.57px;
+  }
 `
 
 export const Button = styled.button`
