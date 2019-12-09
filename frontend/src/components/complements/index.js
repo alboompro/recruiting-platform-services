@@ -31,22 +31,22 @@ class Complements extends Component {
     data.products.map((product) => {
       getRequest().get(`/api/v1/product/${product.id}/ingredients`)
         .then(res => {
-          product.ingredients = res.data.slice(0,3)
-          products.push(product)   
-          this.setState({ products: products })       
+          product.ingredients = res.data.slice(0, 3)
+          products.push(product)
+          this.setState({ products: products })
         })
     })
   }
 
   handleBackButton = () => this.props.history.push({ pathname: '/products', data: this.state })
 
-  handleFinalButton(){
+  handleFinalButton() {
     const recipes = []
     let time = 0
 
     this.state.products.map(product => {
       let selectedProduct = product.ingredients.filter((value) => value.selected === true)
-      time += selectedProduct.map(p => p.preparation_time).reduce((a,b) => a+b,0)
+      time += selectedProduct.map(p => p.preparation_time).reduce((a, b) => a + b, 0)
       recipes.push({
         recipe_id: product.id,
         ingredients: selectedProduct.map(p => p.id)
@@ -64,9 +64,10 @@ class Complements extends Component {
 
     getRequest().post('/api/v1/submit', data)
       .then(res => {
-        this.props.history.push('/final', { time: time, coupon_code: coupon_code })
-      })   
-    
+        this.props.history.push({
+          pathname: '/final', data: { time: time, coupon_code: coupon_code }
+        })
+      })
   }
 
   handleCheckbox = (productIndex, ingredientindex) => {
@@ -97,23 +98,23 @@ class Complements extends Component {
                 </div>
               </ListViewItem>
               <ComplementsContainer>
-              {product.ingredients.map((ingredient, ingredientIndex )=>
-                <div key={ingredientIndex}>
-                  <ListViewItem>
-                    <img src={require(`../../assets/${ingredient.photo}`)} alt="logo" />
-                    <div>
-                      <span>{ingredient.name}</span>
-                      <span>{ingredient.preparation_time}</span>
-                    </div>
-                    <ContainerCheckBox>
-                      <img src={ingredient.selected ? Checked : Unchecked}
-                        onClick={() => this.handleCheckbox(productIndex, ingredientIndex)}
-                        htmlFor="checkbox" alt="check"/>
-                    </ContainerCheckBox>
-                  </ListViewItem>
-                  <Divider style={{ height: "0px", "marginBottom": "12px" }} />
-                </div>
-              )}
+                {product.ingredients.map((ingredient, ingredientIndex) =>
+                  <div key={ingredientIndex}>
+                    <ListViewItem>
+                      <img src={require(`../../assets/${ingredient.photo}`)} alt="logo" />
+                      <div>
+                        <span>{ingredient.name}</span>
+                        <span>{ingredient.preparation_time}</span>
+                      </div>
+                      <ContainerCheckBox>
+                        <img src={ingredient.selected ? Checked : Unchecked}
+                          onClick={() => this.handleCheckbox(productIndex, ingredientIndex)}
+                          htmlFor="checkbox" alt="check" />
+                      </ContainerCheckBox>
+                    </ListViewItem>
+                    <Divider style={{ height: "0px", "marginBottom": "12px" }} />
+                  </div>
+                )}
               </ComplementsContainer>
               <Divider style={{ height: "1px", "marginBottom": "16px" }} />
             </div>

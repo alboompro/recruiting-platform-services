@@ -4,8 +4,7 @@ class Api::V1::SubmitController < ApplicationController
         client_name = params[:client_name]
         client_email = params[:client_email]
         recipes = params[:recipes]
-
-        coupon_code = generate_coupon_code
+        coupon_code = params[:coupon_code]
 
         client = Client.new
         client.name = client_name 
@@ -30,11 +29,5 @@ class Api::V1::SubmitController < ApplicationController
         end
 
         render :nothing => true, :status => :ok
-    end
-
-    private
-
-    def generate_coupon_code
-        return (0...8).map { (65 + rand(26)).chr }.join
     end
 end
