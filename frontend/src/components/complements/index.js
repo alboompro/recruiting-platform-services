@@ -12,7 +12,9 @@ import Unchecked from '../../assets/images/check-empty.svg'
 class Complements extends Component {
 
   state = {
-    products: []
+    products: [],
+    name: "",
+    email: ""
   }
 
   loadData() {
@@ -22,9 +24,11 @@ class Complements extends Component {
       return
     }
 
+    this.setState({ name: data.name, email: data.email })
+
     let products = []
 
-    data.map((product) => {
+    data.products.map((product) => {
       getRequest().get(`/api/v1/product/${product.id}/ingredients`)
         .then(res => {
           product.ingredients = res.data.slice(0,3)
@@ -34,15 +38,42 @@ class Complements extends Component {
     })
   }
 
-  handleBackButton = () => this.props.history.push('/products')
+  handleBackButton = () => this.props.history.push({ pathname: '/products', data: this.state })
 
-  handleFinalButton = () => this.props.history.push('/final')
+  handleFinalButton(){
+    const recipes = []
+    let time = 0
+
+    this.state.products.map(product => {
+      let selectedProduct = product.ingredients.filter((value) => value.selected === true)
+      time += selectedProduct.map(p => p.preparation_time).reduce((a,b) => a+b,0)
+      recipes.push({
+        recipe_id: product.id,
+        ingredients: selectedProduct.map(p => p.id)
+      })
+    })
+
+    const coupon_code = Math.random().toString(36).substr(2, 6).toUpperCase()
+
+    const data = {
+      client_name: this.state.name,
+      client_email: this.state.email,
+      coupon_code: coupon_code,
+      recipes: recipes
+    }
+
+    getRequest().post('/api/v1/submit', data)
+      .then(res => {
+        this.props.history.push('/final', { time: time, coupon_code: coupon_code })
+      })   
+    
+  }
 
   handleCheckbox = (productIndex, ingredientindex) => {
     const array = this.state.products.slice()
     const ingredients = array[productIndex].ingredients
     ingredients[ingredientindex].selected = !ingredients[ingredientindex].selected
-    this.setState({ array })
+    this.setState({ products: array })
   }
 
   componentDidMount() {
@@ -54,10 +85,10 @@ class Complements extends Component {
       <Container>
         <ContainerBody>
           <Header />
-          <Divider style={{ height: "3px", "margin-bottom": "27px" }} />
+          <Divider style={{ height: "3px", "marginBottom": "27px" }} />
           <Description>Adicione complementos ao seu pedido</Description>
           {this.state.products.map((product, productIndex) =>
-            <div>
+            <div key={productIndex}>
               <ListViewItem>
                 <Image src={require(`../../assets/${product.photo}`)} alt="logo" />
                 <div>
@@ -67,7 +98,7 @@ class Complements extends Component {
               </ListViewItem>
               <ComplementsContainer>
               {product.ingredients.map((ingredient, ingredientIndex )=>
-                <div>
+                <div key={ingredientIndex}>
                   <ListViewItem>
                     <img src={require(`../../assets/${ingredient.photo}`)} alt="logo" />
                     <div>
@@ -80,17 +111,17 @@ class Complements extends Component {
                         htmlFor="checkbox" alt="check"/>
                     </ContainerCheckBox>
                   </ListViewItem>
-                  <Divider style={{ height: "0px", "margin-bottom": "12px" }} />
+                  <Divider style={{ height: "0px", "marginBottom": "12px" }} />
                 </div>
               )}
               </ComplementsContainer>
-              <Divider style={{ height: "1px", "margin-bottom": "16px" }} />
+              <Divider style={{ height: "1px", "marginBottom": "16px" }} />
             </div>
           )}
         </ContainerBody>
         <ContainerButton>
           <Button back onClick={this.handleBackButton}>Voltar</Button>
-          <Button submit onClick={this.handleFinalButton}>Finalizar</Button>
+          <Button submit onClick={() => this.handleFinalButton()}>Finalizar</Button>
         </ContainerButton>
       </Container>
     )

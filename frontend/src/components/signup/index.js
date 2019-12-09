@@ -17,7 +17,10 @@ class Signup extends Component {
     getRequest().get(`/api/v1/signup?email=${this.state.email}`)
       .then(res => {         
         if(res.status === 200){
-          this.props.history.push("/products")
+          this.props.history.push({
+            pathname: "/products",
+            data: { name: this.state.name, email: this.state.email }
+          })
         }
       })
       .catch(error => {

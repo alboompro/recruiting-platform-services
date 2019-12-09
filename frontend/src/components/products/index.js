@@ -10,18 +10,22 @@ class Products extends Component {
 
   state = {
     products: [],
-    erro: ""
-  }
-
-  constructor(props) {
-    super(props)
-    this.loadData()
+    erro: "",
+    name: "",
+    email: ""
   }
 
   loadData() {
+    const { data } = this.props.location
+
+    if(data === undefined || data.email === undefined){
+      this.props.history.push("/")
+      return
+    }
+
     getRequest().get('/api/v1/product')
       .then(res => {
-        this.setState({ products: res.data })
+        this.setState({ products: res.data, name: data.name, email: data.email})
       })
       .catch(error => {
         alert(error)
@@ -44,14 +48,18 @@ class Products extends Component {
     this.props.history.push(
       {
         pathname: '/complements',
-        data: filtredProducts
+        data: {name: this.state.name, email: this.state.email, products: filtredProducts}
       })
   }
 
   handleCheckbox = (index) => {
     const array = this.state.products.slice()
     array[index].selected = !array[index].selected
-    this.setState({ array })
+    this.setState({ products: array })
+  }
+
+  componentDidMount() {
+    this.loadData()
   }
 
   render() {
