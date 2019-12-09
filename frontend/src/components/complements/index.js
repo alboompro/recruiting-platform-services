@@ -3,7 +3,7 @@ import Header from '../header'
 import Divider from '../divider'
 import {
   Container, ContainerBody, ListViewItem, Image, ContainerCheckBox,
-  ComplementsContainer, Description, ContainerButton, Button
+  ComplementsContainer, Description, ContainerButton, Button, Popup
 } from './styles'
 import { getRequest } from '../../utils/base-axios'
 import Checked from '../../assets/images/check-ok.svg'
@@ -14,7 +14,8 @@ class Complements extends Component {
   state = {
     products: [],
     name: "",
-    email: ""
+    email: "",
+    erro: ""
   }
 
   loadData() {
@@ -52,6 +53,11 @@ class Complements extends Component {
         ingredients: selectedProduct.map(p => p.id)
       })
     })
+
+    if(time === 0){
+      this.setState({ erro: "Selecionar pelo menos 1 ingrediente." })
+      return
+    }
 
     const coupon_code = Math.random().toString(36).substr(2, 6).toUpperCase()
 
@@ -120,6 +126,9 @@ class Complements extends Component {
             </div>
           )}
         </ContainerBody>
+        <Popup style={this.state.erro === "" ? {display: "none"} : {display: "flex"}}>
+          <span>{this.state.erro}</span>
+        </Popup>
         <ContainerButton>
           <Button back onClick={this.handleBackButton}>Voltar</Button>
           <Button submit onClick={() => this.handleFinalButton()}>Finalizar</Button>

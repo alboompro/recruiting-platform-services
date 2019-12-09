@@ -45,7 +45,7 @@ class Signup extends Component {
             </Label>
             <Label>
               <span>E-mail</span>
-              <input type="text" onChange={e => this.setState({email: e.target.value})} ></input>
+              <input type="email" onChange={e => this.setState({email: e.target.value})} ></input>
             </Label>
             <Popup style={this.state.erro === "" ? {display: "none"} : {display: "flex"}}>
               <span>{this.state.erro}</span>
