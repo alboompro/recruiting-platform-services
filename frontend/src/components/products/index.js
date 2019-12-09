@@ -70,7 +70,7 @@ class Products extends Component {
                 <ContainerCheckBox>
                   <img src={product.selected ? Checked : Unchecked}
                     onClick={() => this.handleCheckbox(index)}
-                    htmlFor="checkbox" alt="check" htmlFor="checkbox" />
+                    htmlFor="checkbox" alt="check"/>
                 </ContainerCheckBox>
               </ListViewItem>
               <Divider style={{ height: "1px", "marginBottom": "20px" }} />

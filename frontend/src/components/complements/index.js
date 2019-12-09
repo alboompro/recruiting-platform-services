@@ -5,7 +5,6 @@ import {
   Container, ContainerBody, ListViewItem, Image, ContainerCheckBox,
   ComplementsContainer, Description, ContainerButton, Button
 } from './styles'
-import dualcoffee from '../../assets/images/cafe-duplo.svg'
 import { getRequest } from '../../utils/base-axios'
 import Checked from '../../assets/images/check-ok.svg'
 import Unchecked from '../../assets/images/check-empty.svg'
@@ -14,10 +13,6 @@ class Complements extends Component {
 
   state = {
     products: []
-  }
-
-  constructor(props) {
-    super(props)
   }
 
   loadData() {
@@ -82,7 +77,7 @@ class Complements extends Component {
                     <ContainerCheckBox>
                       <img src={ingredient.selected ? Checked : Unchecked}
                         onClick={() => this.handleCheckbox(productIndex, ingredientIndex)}
-                        htmlFor="checkbox" alt="check" htmlFor="checkbox" />
+                        htmlFor="checkbox" alt="check"/>
                     </ContainerCheckBox>
                   </ListViewItem>
                   <Divider style={{ height: "0px", "margin-bottom": "12px" }} />

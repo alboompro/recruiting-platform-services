@@ -23,7 +23,7 @@ export default () => (
         <span>ASDAER</span>
       </CouponBox>
       <ContainerButton>
-        <ButtonReset><img src={Reset}/></ButtonReset>
+        <ButtonReset><img src={Reset} alt="reset"/></ButtonReset>
         <ButtonPrint>Imprimir cupom</ButtonPrint>
       </ContainerButton>
     </ContainerBody>    
