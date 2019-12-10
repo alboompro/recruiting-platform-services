@@ -13,6 +13,11 @@ class Signup extends Component {
 
   handleSignup = e => {
     e.preventDefault()
+
+    if(this.state.email === "" || this.state.name === ""){
+      this.setState({erro: "Ops! Preencher todas as informações."})
+      return
+    }
     
     getRequest().get(`/api/v1/signup?email=${this.state.email}`)
       .then(res => {         

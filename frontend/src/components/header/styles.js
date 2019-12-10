@@ -9,8 +9,7 @@ export const Header = styled.div`
     display: flex;
     justify-content: flex-end;
     font-family: 'PTSans', sans-serif;
-    font-size: 29px;
-    letter-spacing: 3px;
+    font-size: 28px;
     color: #503a23;
     margin-left: 24px;
   }
