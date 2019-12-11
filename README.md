@@ -27,3 +27,6 @@ Seu funcionamento é simples, o cliente informa seu nome e e-mail, escolhe dois 
 - Entre na pasta **frontend** e instale as dependências digitando no terminal o comando **npm install**;
 - Entre no arquivo **/frontend/src/utils/base-axios.js** e configure o parametro **baseURL** com o **IP e porta** da API rails configurado anteriormente;
 - Rode o site com o comando **npm start** em seu terminal;
+
+### Demo
+- https://app-smart-coffee.herokuapp.com/
