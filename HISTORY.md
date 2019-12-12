@@ -15,6 +15,7 @@
 - Correções na API (Backend)
 - Criação do projeto React (Frontend)
 - Criação da tela de cadastro
+- Para estilização dos componentes foi escolhido a package Styled-Components, pela simplicidade e produtividade
 
 #####02/12/2019
 - Criação da tela de produtos (Frontend)
@@ -34,7 +35,7 @@
 - Correções de layout
 
 #####06/12/2019
--  Implementação da lógina na tela de complementos
+- Implementação da lógina na tela de complementos
 - Correções
 
 #####09/12/2019
@@ -43,3 +44,4 @@
 
 #####10/12/2019
 - Correções
+- Publicação Heroku
