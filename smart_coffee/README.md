@@ -13,13 +13,15 @@ O projeto tem como objetivo fornecer cupons promocionais dos produtos aos client
 7. Abra uma nova guia em seu navegador e digite na url ```localhost/smart_coffee```. Automaticamente será encaminhada para a ```index.php``` do projeto;
 8. Logo, o projeto poderá ser executado e testado. 
 
-# Linguagens e framework utilizados no desenvolvimento
+# Linguagens, bibliotecas e framework utilizados no desenvolvimento
 
 - HTML: Linguagem de marcação utilizada para construir as páginas da web, podendo ser interpretado pelos navegadores;
 - CSS: Folha de cascata em estilo utilizada para modificar os estilos, adicionando como, por exemplo: cores, tamanho da fonte, tipografia, etc;
 - PHP: Linguagem de programação para o desenvolvimento back-end, atuando no lado do servidor;
 - JavaScript: Linguagem de programação utilizada desenvolvimento front-end, permitindo a interatividade nas páginas da web;
 - Bootstrap: Framework utilizado para o desenvolvimento front-end, contendo a responsividade para dispositivos móveis;
+- JQuery: Biblioteca de funções JavaScript;
+- SweetAlert: Biblioteca de funções JavaScript para tornar as mensagens pop-up fáceis e bonitas;
 - Linguagem SQL: Linguagem de pequisa utilizada para o banco de dados, dividindo em subconjuntos, como, por exemplo: inserção, criação, etc;
 
 # Histórico
