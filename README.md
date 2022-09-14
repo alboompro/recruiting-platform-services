@@ -78,3 +78,7 @@ Como desenvolvi o projeto em dois repositórios diferentes (um para o front e um
 Para isso, disponibilizo os links dos repositórios do front e do back, respectivamente, em que estão salvos esse histórico:
 - https://github.com/murillopm/smart-coffee-front
 - https://github.com/murillopm/smart-coffee-api
+
+### Histórico de desenvolvimento
+
+O histórico de desenvolvimento pode ser acessado em [HISTORY.md](HISTORY.md)
