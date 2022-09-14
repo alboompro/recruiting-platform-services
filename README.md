@@ -28,7 +28,6 @@ O teste envolvia a criação de um serviço de geração de cupons de desconto a
 1. Clone este repositório
 2. Abra um terminal e navegue até a pasta local do repositório clonado
 3. Mude para a branch **murilloMesquita** através do comando:
-    * rode o seguinte comando
     ```bash
     git checkout murilloMesquita
     ```
