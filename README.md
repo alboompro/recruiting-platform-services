@@ -7,6 +7,7 @@ O teste envolvia a criação de um serviço de geração de cupons de desconto a
 - NPM
 - Docker
 - Docker Compose
+- Git
 
 ### Tecnologias escolhidas
 
@@ -26,26 +27,32 @@ O teste envolvia a criação de um serviço de geração de cupons de desconto a
 
 1. Clone este repositório
 2. Abra um terminal e navegue até a pasta local do repositório clonado
-3. Novamente pelo terminal, navegue até a pasta **smart_coffee_back**
+3. Mude para a branch **murilloMesquita** através do comando:
+    * rode o seguinte comando
+    ```bash
+    git checkout murilloMesquita
+    ```
+
+4. Novamente pelo terminal, navegue até a pasta **smart_coffee_back**
     * rode os seguintes comandos:
     ```bash
     npm install
     docker-compose up -d
     ```
     * esses comandos irão subir tanto a API quanto o banco de dados. Além disso, através do *docker-compose*, será rodado o script para criar e alimentar o banco de dados. Para a API ser disponibilizada sem problemas, deixe disponível a porta 3000 do *localhost*
-4. Volte ao diretório raiz e, então, navegue até a pasta **smart_coffee_front**
+5. Volte ao diretório raiz e, então, navegue até a pasta **smart_coffee_front**
     * rode os seguintes comandos:
     ```bash
     npm install
     npm run dev
     ```
-5. Abra o navegador e acesse a aplicação web pela URL disponibilizada pelo Vite (provavelmente a porta 5173), como abaixo:
+6. Abra o navegador e acesse a aplicação web pela URL disponibilizada pelo Vite (provavelmente a porta 5173), como abaixo:
     ```bash
     http://localhost:5173
     ```
     * obs: caso tenha alguma aplicação rodando na porta 5173, pare-a temporariamente.
-6. Para derrubar a aplicação web, pressione `CTRL+C` no terminal.
-7. Em seguida, volte à pasta **smart_coffee_back** e rode o seguinte comando:
+7. Para derrubar a aplicação web, pressione `CTRL+C` no terminal.
+8. Em seguida, volte à pasta **smart_coffee_back** e rode o seguinte comando:
     ```bash
     docker-compose down
     ```
