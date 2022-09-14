@@ -1,59 +1,90 @@
-# Teste para recutramento Plataforma e Serviços
+# Teste para recrutamento Plataforma e Serviços
 
-### A Alboom
+O teste envolvia a criação de um serviço de geração de cupons de desconto através de um totem de autoatendimento. Como parte do processo, o cliente poderia solicitar, caso quisesse, um ou mais cafés.
 
-A Alboom é hoje a maior plataforma de serviços digitais para fotógrafos e artistas visuais da América Latina. Englobamos a maior diversidade de produtos e serviços para fotógrafos, contando com sites profissionais, aprovação de fotos, aprovação de álbum, aprovação de vídeos, criação de galerias, CRM para fotógrafos e muito mais. Além disso temos como missão ser uma plataforma multi aplicação possuindo uma gigantesca camada de micro-serviços entregando a melhor experiência para nossos usuários.
+### Requisitos para rodar as aplicações
 
-Reconhece a importância da igualdade de oportunidades e o respeito ao ser humano. Valorizamos a diversidade e temos convicção de que todos podem fazer algo que mudará o mundo ou a vida de alguém para melhor.
+- NPM
+- Docker
+- Docker Compose
+- Git
 
-### Contexto do projeto
+### Tecnologias escolhidas
 
-A **Alboom** decidiu participar da primeira edição da _FENAFAC_ (Feira Nacional dos Fotógrafos Amantes de Café), onde ofereceremos cupons promocionais de nossos produtos aos participantes.
-Como forma de inovar e mostrar que o cliente é sempre a sua maior preocupação, tivemos a ideia de oferecer este cupom através de um totem de autoatendimento onde o cliente também poderá solicitar e apreciar um delicioso café.
+- Front-end
+  * React (utilizando o Vite como ferramenta de build)
+  * Typescript
+  * Styled components 
+- Back-end
+  * Node.js + Express
+  * Typescript
 
-Cada fotógrafo terá direito de solicitar um único pedido contendo, no máximo, dois itens. Para solicitar o pedido, a pessoa deverá informar seu **nome** e **e-mail**.
+- Banco de dados
+  * MySQL
+  * Docker/Docker Compose para subir os containeres tanto da API quanto do banco de dados
 
-No próximo passo, utilizando nosso cardápio, ele poderá escolher entre diferentes receitas, assim como personalizá-las, adicionando complementos ao seu pedido. Ao final do pedido, será contabilizado o tempo total de preparo dos itens escolhidos, que será utilizado para alimentar uma contagem regressiva, o que aumentará ainda mais a vontade deste fotógrafo sedento de cafeína!!!!
+### Como rodar as aplicações
 
-Porém, enquanto aguarda, nosso querido amigo e potencial cliente poderá solicitar a impressão de seu _cupom_ de desconto para adquirir um de nossos produtos. Esperamos que o nosso querido  fotógrafo possa voltar às atividades da feira em posse do seu cupom de desconto e de seu delicioso café, fornecidos eficientemente pelo nosso inovador totem de autoatendimento para fotógrafos apreciadores de café!
+1. Clone este repositório
+2. Abra um terminal e navegue até a pasta local do repositório clonado
+3. Mude para a branch **murilloMesquita** através do comando:
+    ```bash
+    git checkout murilloMesquita
+    ```
 
-### Instruções
+4. Novamente pelo terminal, navegue até a pasta **smart_coffee_back**
+    * rode os seguintes comandos:
+    ```bash
+    npm install
+    docker-compose up -d
+    ```
+    * esses comandos irão subir tanto a API quanto o banco de dados. Além disso, através do *docker-compose*, será rodado o script para criar e alimentar o banco de dados. Para a API ser disponibilizada sem problemas, deixe disponível a porta 3000 do *localhost*
+5. Volte ao diretório raiz e, então, navegue até a pasta **smart_coffee_front**
+    * rode os seguintes comandos:
+    ```bash
+    npm install
+    npm run dev
+    ```
+6. Abra o navegador e acesse a aplicação web pela URL disponibilizada pelo Vite (provavelmente a porta 5173), como abaixo:
+    ```bash
+    http://localhost:5173
+    ```
+    * obs: caso tenha alguma aplicação rodando na porta 5173, pare-a temporariamente.
+7. Para derrubar a aplicação web, pressione `CTRL+C` no terminal.
+8. Em seguida, volte à pasta **smart_coffee_back** e rode o seguinte comando:
+    ```bash
+    docker-compose down
+    ```
+    
 
-1. Crie uma conta no [github.com](https://www.github.com/);
-1. Faça um fork e clone do projeto;
-1. Crie uma branch (utilize seu nome);
-1. Execute o arquivo SQL presente no projeto para criar e popular seu banco de dados;
-1. Estude as telas que estão no [zeplin](https://scene.zeplin.io/project/5a79d3ac106e052f5474d94a);
-1. Crie uma aplicação implementando uma solução para o cenário apresentado;
-8. Submeta o Pull Request e envie um email para recruit@alboompro.com;
+### Fluxo e funcionalidades da aplicação front-end
 
-**PS:** Usamos o mesmo teste para todos os níveis: **junior**, **pleno** ou **senior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando.
+1. **Tela de cadastros**
+    * usuário preenche nome e e-mail e clica em **Cadastrar**.
+    * caso o e-mail preenchido seja encontrado no banco de dados, uma mensagem de erro é retornada ao usuário e ele permanece na tela. Caso o cadastro ocorra normalmente, ele é redirecionado para a tela de **Produtos**
+2. **Tela de produtos**
+    * usuário pode escolher até 2 tipos de café, inclusive nenhum.
+    * caso o usuário não escolha nenhum café e clique em **Continuar**, é mostrado um modal para a confirmação do usuário. Caso ele confirme, a aplicação é redirecionada para a **Tela final**, onde o usuário poderá imprimir o cupom de desconto. Caso contrário, ele volta a **Tela de produtos**.
+    * caso o usuário escolha 1 ou 2 cafés e clique em **Continuar**, ele será redirecionado para a **Tela de complementos**.
+3. **Tela de complementos**
+    * nessa tela o usuário pode escolher adicionar os complementos nos respectivos cafés. 
+    * não há a obrigatoriedade de escolher um complemento e a escolha também não é limitada.
+    * caso clique em **Finalizar**, a aplicação é redirecionada para a **Tela final**.
+    * caso clique em voltar, o usuário é redirecionado novamente a **Tela de produtos**
+4. **Tela final**
+    * Nesta tela, caso o usuário tenha algum café sendo preparado, é mostrado um *timer* com o tempo de preparação restante do(s) café(s), além de uma barra de progresso. Quando termina o tempo de preparação, é mostrada uma mensagem de sucesso para o usuário.
+    *Caso o usuário não tenha escolhido nenhum café, é mostrado apenas uma mensagem.
+    
+    * Além disso, para qualquer caso, também é mostrado o cupom gerado, além de um botão para voltar à **Tela inicial** e um botão para imprimir o cupom. Caso o usuário clique em **Imprimir cupom** é mostrada uma mensagem de sucesso na tela.
 
-### Esperamos que você
 
-* Desenvolva sua aplicação utilizando uma das seguintes linguagens: Ruby, PHP, Javascript;
-* Otimize a aplicação ao máximo;
-* Especifique o projeto no `README.md`, inclua etapas necessárias para sua utilização;
-* Documente suas tomadas de decisões e inclua um diário do projeto em um arquivo HISTORY.md;
-* Faça commits pequenos e bem especificados;
+### Histórico de commits
 
-### Você também pode, por exemplo
+Como desenvolvi o projeto em dois repositórios diferentes (um para o front e um para o back) os commits ficaram separados e em seus respectivos diretórios. Neste repositório especificamente, as pastas só foram incorporadas e não possue o histórico de desenvolvimento das aplicações.  
+Para isso, disponibilizo os links dos repositórios do front e do back, respectivamente, em que estão salvos esse histórico:
+- https://github.com/murillopm/smart-coffee-front
+- https://github.com/murillopm/smart-coffee-api
 
-* Utilizar frameworks como rails, laravel, express ou similar;
-* Utilizar bibliotecas javascript como AngularJS, ReactJS, Vue.js ou similar;
-* Utilizar um pré-processador de CSS (Scss, Stylus);
-* Utilizar um task runner de sua preferência;
-* Utilizar bibliotecas CSS como Compass, Bourbon, AnimateCSS ou similar;
-* Utilizar frameworks CSS como Bootstrap e Foundation;
-* Deixar sua aplicação online usando Heroku;
+### Histórico de desenvolvimento
 
-### Ganhe pontos extras por:
-
-* Testes automatizados;
-* Desenvolver HTML semântico;
-* Componentizar seu CSS;
-* Ser fiel as especificações dos arquivos;
-* HTML com acessibilidade;
-* Utilizar conceitos de API RESTful;
-
-<br><br><sub>Os dados presentes neste teste são totalmente fictícios.</sub>
+O histórico de desenvolvimento pode ser acessado em [HISTORY.md](HISTORY.md)

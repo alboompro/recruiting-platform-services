@@ -1,0 +1,28 @@
+version: '3'
+
+services: 
+  mysql:
+    container_name: 'mysql-db'
+    image: mysql:5.7.31
+    command: --default-authentication-plugin=mysql_native_password --sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER --explicit_defaults_for_timestamp
+    restart: always
+    ports: 
+      - "3308:3306"
+    environment: 
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: mysqldb
+        MYSQL_USER: user
+        MYSQL_PASSWORD: user
+    volumes: 
+      - ../:/docker-entrypoint-initdb.d
+  app: 
+    build: .
+    command: npm start
+    ports: 
+      - "3000:3000"
+    links:
+      - mysql:mysql
+    depends_on:
+      - "mysql"
+    volumes: 
+      - .:/usr/app
