@@ -1,0 +1,41 @@
+.cardCoffeesContainer {
+    display: flex;
+    padding: 1rem 5rem;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.noConfirm {
+    display: flex;
+    gap: 2rem;
+}
+
+.cardInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.cardInfoContainer h2 {
+    color: #8f8881;
+}
+
+.circleConfirmContainer {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleConfirm {
+    border: 1px solid #8f8881;
+    width: 4rem;
+    height: 4rem;
+}
+
+.timeContainer {
+    display: flex;
+    gap: 5px;
+    color: #8f8881;
+}
