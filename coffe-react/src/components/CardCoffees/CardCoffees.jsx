@@ -1,6 +1,12 @@
+import { React } from "react";
+
 import "./CardCoffees.css";
 
 const CardCoffees = (props) => {
+  const checked = () => {
+    localStorage.setItem(props.id, props.id);
+  };
+
   return (
     <section>
       <div className="cardCoffeesContainer">
@@ -17,7 +23,12 @@ const CardCoffees = (props) => {
           </div>
         </div>
         <div className="circleConfirmContainer">
-          <input className="circleConfirm" type="checkbox" />
+          <input
+            className="circleConfirm"
+            type="checkbox"
+            name="selected"
+            onClick={checked}
+          />
         </div>
       </div>
 
