@@ -1,0 +1,33 @@
+.divButtonContainer {
+    display: flex;
+}
+
+.divButtonContainer a {
+    width: 50%;
+}
+
+.textContainer {
+    padding: 2rem;
+    text-align: center;
+}
+
+.textContainer p {
+    font-size: 2rem;
+    color: #9A8F84;
+}
+
+#back {
+    background-color: #D15F41;
+}
+
+#finish {
+    background-color: #3DC890;
+}
+
+#back:hover {
+    background-color: #a34c36;
+}
+
+#finish:hover {
+    background-color: #34a075;
+}

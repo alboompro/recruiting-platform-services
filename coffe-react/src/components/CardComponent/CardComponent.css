@@ -1,0 +1,31 @@
+.coffeeContainer {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.componentContainer {
+    display: flex;
+    padding: 1rem;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.componentCard {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex-end{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.inputCheck {
+    border: 1px solid #8f8881;
+    width: 4rem;
+    height: 4rem;
+}
