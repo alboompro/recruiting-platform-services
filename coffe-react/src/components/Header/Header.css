@@ -1,0 +1,26 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.titleContainer h1 {
+    color: #5E4429;
+    font-size: 3rem;
+}
+
+.spanContainer span {
+    color: #ADA399;
+}
+
+.spanContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.infoHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
